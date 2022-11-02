@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "ialXoSYQennNwnj5jbr/Ikjja4m+Du/z3NPULtfw/5XpeFd+9lP/CMrmz8LRj49JJ2scFo4cFIc091tEfUC6iw==",
+  "success": true,
+  "projectFilePath": "/Users/anand/Projects/WeatherReport/WeatherReportShared/WeatherReportShared.csproj",
+  "expectedPackageFiles": [
+    "/Users/anand/.nuget/packages/newtonsoft.json/13.0.1/newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}
