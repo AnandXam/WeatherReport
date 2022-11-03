@@ -1,17 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
+using Android;
 using Android.App;
 using Android.Content;
+using Android.Content.PM;
 using Android.Locations;
 using Android.OS;
 using Android.Runtime;
 using Android.Support.V7.Widget;
 using Android.Widget;
 using AndroidX.AppCompat.App;
+using AndroidX.Core.App;
 using Com.Airbnb.Lottie;
 using Google.Places;
 using Newtonsoft.Json;
-using Square.Picasso;
 using WeatherReportShared.Model;
 using Xamarin.Essentials;
 
@@ -175,12 +178,12 @@ namespace WeatherReport
                 activity.TempText.Text = $"{openWeatherMap.current.temp} °F";
                 if (!string.IsNullOrEmpty(openWeatherMap.current.weather[0].icon_url))
                 {
-                    Picasso.Get()
-                    .Load(openWeatherMap.current.weather[0].icon_url)
-                    .Fit()
-                    .CenterCrop()
-                    .NoFade()
-                    .Into(activity.WeatherImage);
+                    //Picasso.Get()
+                    //.Load(openWeatherMap.current.weather[0].icon_url)
+                    //.Fit()
+                    //.CenterCrop()
+                    //.NoFade()
+                    //.Into(activity.WeatherImage);
                 }
             }
         }

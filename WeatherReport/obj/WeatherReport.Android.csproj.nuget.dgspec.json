@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/anand/Projects/WeatherReport/WeatherReport/WeatherReport.Android.csproj": {}
+    "/Users/anand/Documents/WeatherReport/WeatherReport/WeatherReport.Android.csproj": {}
   },
   "projects": {
-    "/Users/anand/Projects/WeatherReport/WeatherReport/WeatherReport.Android.csproj": {
+    "/Users/anand/Documents/WeatherReport/WeatherReport/WeatherReport.Android.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/anand/Projects/WeatherReport/WeatherReport/WeatherReport.Android.csproj",
+        "projectUniqueName": "/Users/anand/Documents/WeatherReport/WeatherReport/WeatherReport.Android.csproj",
         "projectName": "WeatherReport",
-        "projectPath": "/Users/anand/Projects/WeatherReport/WeatherReport/WeatherReport.Android.csproj",
+        "projectPath": "/Users/anand/Documents/WeatherReport/WeatherReport/WeatherReport.Android.csproj",
         "packagesPath": "/Users/anand/.nuget/packages/",
-        "outputPath": "/Users/anand/Projects/WeatherReport/WeatherReport/obj/",
+        "outputPath": "/Users/anand/Documents/WeatherReport/WeatherReport/obj/",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "configFilePaths": [
@@ -26,8 +26,8 @@
         "frameworks": {
           "monoandroid12.0": {
             "projectReferences": {
-              "/Users/anand/Projects/WeatherReport/WeatherReportShared/WeatherReportShared.csproj": {
-                "projectPath": "/Users/anand/Projects/WeatherReport/WeatherReportShared/WeatherReportShared.csproj"
+              "/Users/anand/Documents/WeatherReport/WeatherReportShared/WeatherReportShared.csproj": {
+                "projectPath": "/Users/anand/Documents/WeatherReport/WeatherReportShared/WeatherReportShared.csproj"
               }
             }
           }
@@ -44,10 +44,6 @@
               "target": "Package",
               "version": "[13.0.1, )"
             },
-            "Rightek.Square.Picasso": {
-              "target": "Package",
-              "version": "[2.7.1.828, )"
-            },
             "Xamarin.Android.Support.Compat": {
               "target": "Package",
               "version": "[28.0.0.3, )"
@@ -56,25 +52,17 @@
               "target": "Package",
               "version": "[28.0.0.3, )"
             },
-            "Xamarin.Android.Support.v7.AppCompat": {
+            "Xamarin.AndroidX.Legacy.Support.Core.UI": {
               "target": "Package",
-              "version": "[28.0.0.3, )"
-            },
-            "Xamarin.AndroidX.AppCompat": {
-              "target": "Package",
-              "version": "[1.2.0.5, )"
-            },
-            "Xamarin.AndroidX.Lifecycle.LiveData": {
-              "target": "Package",
-              "version": "[2.5.1.1, )"
+              "version": "[1.0.0.16, )"
             },
             "Xamarin.Essentials": {
               "target": "Package",
-              "version": "[1.6.1, )"
+              "version": "[1.7.3, )"
             },
             "Xamarin.Google.Android.Material": {
               "target": "Package",
-              "version": "[1.0.0.1, )"
+              "version": "[1.7.0.1, )"
             },
             "Xamarin.Google.Android.Places": {
               "target": "Package",
@@ -84,14 +72,14 @@
         }
       }
     },
-    "/Users/anand/Projects/WeatherReport/WeatherReportShared/WeatherReportShared.csproj": {
+    "/Users/anand/Documents/WeatherReport/WeatherReportShared/WeatherReportShared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/anand/Projects/WeatherReport/WeatherReportShared/WeatherReportShared.csproj",
+        "projectUniqueName": "/Users/anand/Documents/WeatherReport/WeatherReportShared/WeatherReportShared.csproj",
         "projectName": "WeatherReportShared",
-        "projectPath": "/Users/anand/Projects/WeatherReport/WeatherReportShared/WeatherReportShared.csproj",
+        "projectPath": "/Users/anand/Documents/WeatherReport/WeatherReportShared/WeatherReportShared.csproj",
         "packagesPath": "/Users/anand/.nuget/packages/",
-        "outputPath": "/Users/anand/Projects/WeatherReport/WeatherReportShared/obj/",
+        "outputPath": "/Users/anand/Documents/WeatherReport/WeatherReportShared/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/anand/.config/NuGet/NuGet.Config"

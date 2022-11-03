@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/anand/Projects/WeatherReport/WeatherReport.ios/WeatherReport.ios.csproj": {}
+    "/Users/anand/Documents/WeatherReport/WeatherReport.ios/WeatherReport.ios.csproj": {}
   },
   "projects": {
-    "/Users/anand/Projects/WeatherReport/WeatherReport.ios/WeatherReport.ios.csproj": {
+    "/Users/anand/Documents/WeatherReport/WeatherReport.ios/WeatherReport.ios.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/anand/Projects/WeatherReport/WeatherReport.ios/WeatherReport.ios.csproj",
+        "projectUniqueName": "/Users/anand/Documents/WeatherReport/WeatherReport.ios/WeatherReport.ios.csproj",
         "projectName": "WeatherReport.ios",
-        "projectPath": "/Users/anand/Projects/WeatherReport/WeatherReport.ios/WeatherReport.ios.csproj",
+        "projectPath": "/Users/anand/Documents/WeatherReport/WeatherReport.ios/WeatherReport.ios.csproj",
         "packagesPath": "/Users/anand/.nuget/packages/",
-        "outputPath": "/Users/anand/Projects/WeatherReport/WeatherReport.ios/obj/",
+        "outputPath": "/Users/anand/Documents/WeatherReport/WeatherReport.ios/obj/",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "configFilePaths": [
@@ -26,8 +26,8 @@
         "frameworks": {
           "xamarinios10": {
             "projectReferences": {
-              "/Users/anand/Projects/WeatherReport/WeatherReportShared/WeatherReportShared.csproj": {
-                "projectPath": "/Users/anand/Projects/WeatherReport/WeatherReportShared/WeatherReportShared.csproj"
+              "/Users/anand/Documents/WeatherReport/WeatherReportShared/WeatherReportShared.csproj": {
+                "projectPath": "/Users/anand/Documents/WeatherReport/WeatherReportShared/WeatherReportShared.csproj"
               }
             }
           }
@@ -42,7 +42,7 @@
             },
             "Xamarin.Essentials": {
               "target": "Package",
-              "version": "[1.6.1, )"
+              "version": "[1.7.3, )"
             }
           }
         }
@@ -59,14 +59,14 @@
         }
       }
     },
-    "/Users/anand/Projects/WeatherReport/WeatherReportShared/WeatherReportShared.csproj": {
+    "/Users/anand/Documents/WeatherReport/WeatherReportShared/WeatherReportShared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/anand/Projects/WeatherReport/WeatherReportShared/WeatherReportShared.csproj",
+        "projectUniqueName": "/Users/anand/Documents/WeatherReport/WeatherReportShared/WeatherReportShared.csproj",
         "projectName": "WeatherReportShared",
-        "projectPath": "/Users/anand/Projects/WeatherReport/WeatherReportShared/WeatherReportShared.csproj",
+        "projectPath": "/Users/anand/Documents/WeatherReport/WeatherReportShared/WeatherReportShared.csproj",
         "packagesPath": "/Users/anand/.nuget/packages/",
-        "outputPath": "/Users/anand/Projects/WeatherReport/WeatherReportShared/obj/",
+        "outputPath": "/Users/anand/Documents/WeatherReport/WeatherReportShared/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/anand/.config/NuGet/NuGet.Config"

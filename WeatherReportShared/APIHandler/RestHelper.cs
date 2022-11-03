@@ -21,29 +21,15 @@ namespace WeatherReportShared.APIHandler
             {
                 Uri url = new Uri(urlString);
                 var client = new HttpClient { BaseAddress = url };
-                req = new HttpRequestMessage(HttpMethod.Post, url);
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                req = new HttpRequestMessage(HttpMethod.Get, url);
                 Task<string> task = Task.Run(async () => await Threading(client, req));
                 task.Wait();
                 stringObtained = task.Result;
-                //jsonObtained = Regex.Unescape(stringObtained);
 
-
-                //using (var urlConnection = (HttpURLConnection)url.OpenConnection())
-                //{
-                //    if (urlConnection.ResponseCode == HttpStatus.Ok)
-                //    {
-                //        BufferedReader r = new BufferedReader(new InputStreamReader(urlConnection.InputStream));
-                //        StringBuilder sb = new StringBuilder();
-                //        String line;
-                //        while ((line = r.ReadLine()) != null) sb.Append(line);
-                //        stream = sb.ToString();
-                //        urlConnection.Disconnect();
-                //    }
-                //}
             }
             catch (Exception ex)
             {
-                System.Diagnostics.Debug.WriteLine(ex.Message);
             }
             return stringObtained;
         }
@@ -51,7 +37,6 @@ namespace WeatherReportShared.APIHandler
         async Task<string> Threading(HttpClient client, HttpRequestMessage req)
         {
             var resp = await client.SendAsync(req);
-            //resp.EnsureSuccessStatusCode();
             switch (resp.StatusCode)
             {
                 case System.Net.HttpStatusCode.OK:

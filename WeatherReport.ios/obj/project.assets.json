@@ -20,7 +20,7 @@
           "lib/xamarinios10/_._": {}
         }
       },
-      "Xamarin.Essentials/1.6.1": {
+      "Xamarin.Essentials/1.7.3": {
         "type": "package",
         "dependencies": {
           "System.Numerics.Vectors": "4.5.0"
@@ -70,7 +70,7 @@
           "lib/xamarinios10/_._": {}
         }
       },
-      "Xamarin.Essentials/1.6.1": {
+      "Xamarin.Essentials/1.7.3": {
         "type": "package",
         "dependencies": {
           "System.Numerics.Vectors": "4.5.0"
@@ -120,7 +120,7 @@
           "lib/xamarinios10/_._": {}
         }
       },
-      "Xamarin.Essentials/1.6.1": {
+      "Xamarin.Essentials/1.7.3": {
         "type": "package",
         "dependencies": {
           "System.Numerics.Vectors": "4.5.0"
@@ -170,7 +170,7 @@
           "lib/xamarinios10/_._": {}
         }
       },
-      "Xamarin.Essentials/1.6.1": {
+      "Xamarin.Essentials/1.7.3": {
         "type": "package",
         "dependencies": {
           "System.Numerics.Vectors": "4.5.0"
@@ -277,10 +277,10 @@
         "version.txt"
       ]
     },
-    "Xamarin.Essentials/1.6.1": {
-      "sha512": "gG1Bp4j4bpJQ0dp9MeBJQJ9c8xULauIlhc7Cx5Qw4J2K1c+4Glq5n+gkb9Pm0UA/CevXVqLK5ZXmZkuYI52FgA==",
+    "Xamarin.Essentials/1.7.3": {
+      "sha512": "b6NfxOfkmMGN54a4OcV/D7KXclWWqFwgixMPzlAku3kfKgUBGW4vBdNaujIBmk57NbGpWB2IS78ek0gDHNKwoQ==",
       "type": "package",
-      "path": "xamarin.essentials/1.6.1",
+      "path": "xamarin.essentials/1.7.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -289,15 +289,6 @@
         "lib/monoandroid10.0/Xamarin.Essentials.dll",
         "lib/monoandroid10.0/Xamarin.Essentials.pdb",
         "lib/monoandroid10.0/Xamarin.Essentials.xml",
-        "lib/monoandroid80/Xamarin.Essentials.dll",
-        "lib/monoandroid80/Xamarin.Essentials.pdb",
-        "lib/monoandroid80/Xamarin.Essentials.xml",
-        "lib/monoandroid81/Xamarin.Essentials.dll",
-        "lib/monoandroid81/Xamarin.Essentials.pdb",
-        "lib/monoandroid81/Xamarin.Essentials.xml",
-        "lib/monoandroid90/Xamarin.Essentials.dll",
-        "lib/monoandroid90/Xamarin.Essentials.pdb",
-        "lib/monoandroid90/Xamarin.Essentials.xml",
         "lib/netstandard1.0/Xamarin.Essentials.dll",
         "lib/netstandard1.0/Xamarin.Essentials.pdb",
         "lib/netstandard1.0/Xamarin.Essentials.xml",
@@ -324,7 +315,7 @@
         "lib/xamarinwatchos10/Xamarin.Essentials.pdb",
         "lib/xamarinwatchos10/Xamarin.Essentials.xml",
         "readme.txt",
-        "xamarin.essentials.1.6.1.nupkg.sha512",
+        "xamarin.essentials.1.7.3.nupkg.sha512",
         "xamarin.essentials.nuspec"
       ]
     },
@@ -338,7 +329,7 @@
     "Xamarin.iOS,Version=v1.0": [
       "Newtonsoft.Json >= 13.0.1",
       "WeatherReportShared >= 1.0.0",
-      "Xamarin.Essentials >= 1.6.1"
+      "Xamarin.Essentials >= 1.7.3"
     ]
   },
   "packageFolders": {
@@ -347,11 +338,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/anand/Projects/WeatherReport/WeatherReport.ios/WeatherReport.ios.csproj",
+      "projectUniqueName": "/Users/anand/Documents/WeatherReport/WeatherReport.ios/WeatherReport.ios.csproj",
       "projectName": "WeatherReport.ios",
-      "projectPath": "/Users/anand/Projects/WeatherReport/WeatherReport.ios/WeatherReport.ios.csproj",
+      "projectPath": "/Users/anand/Documents/WeatherReport/WeatherReport.ios/WeatherReport.ios.csproj",
       "packagesPath": "/Users/anand/.nuget/packages/",
-      "outputPath": "/Users/anand/Projects/WeatherReport/WeatherReport.ios/obj/",
+      "outputPath": "/Users/anand/Documents/WeatherReport/WeatherReport.ios/obj/",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
@@ -366,8 +357,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "/Users/anand/Projects/WeatherReport/WeatherReportShared/WeatherReportShared.csproj": {
-              "projectPath": "/Users/anand/Projects/WeatherReport/WeatherReportShared/WeatherReportShared.csproj"
+            "/Users/anand/Documents/WeatherReport/WeatherReportShared/WeatherReportShared.csproj": {
+              "projectPath": "/Users/anand/Documents/WeatherReport/WeatherReportShared/WeatherReportShared.csproj"
             }
           }
         }
@@ -382,7 +373,7 @@
           },
           "Xamarin.Essentials": {
             "target": "Package",
-            "version": "[1.6.1, )"
+            "version": "[1.7.3, )"
           }
         }
       }

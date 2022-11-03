@@ -53,11 +53,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/anand/Projects/WeatherReport/WeatherReportShared/WeatherReportShared.csproj",
+      "projectUniqueName": "/Users/anand/Documents/WeatherReport/WeatherReportShared/WeatherReportShared.csproj",
       "projectName": "WeatherReportShared",
-      "projectPath": "/Users/anand/Projects/WeatherReport/WeatherReportShared/WeatherReportShared.csproj",
+      "projectPath": "/Users/anand/Documents/WeatherReport/WeatherReportShared/WeatherReportShared.csproj",
       "packagesPath": "/Users/anand/.nuget/packages/",
-      "outputPath": "/Users/anand/Projects/WeatherReport/WeatherReportShared/obj/",
+      "outputPath": "/Users/anand/Documents/WeatherReport/WeatherReportShared/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/anand/.config/NuGet/NuGet.Config"
