@@ -5,12 +5,15 @@ using System.Net.Http.Headers;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
+using WeatherReportShared.Model;
 
 namespace WeatherReportShared.APIHandler
 {
     public class RestHelper
     {
         private HttpRequestMessage req;
+        OneCallAPI oneCallAPIData;
         string stringObtained;
         public RestHelper()
         {
@@ -26,6 +29,7 @@ namespace WeatherReportShared.APIHandler
                 Task<string> task = Task.Run(async () => await Threading(client, req));
                 task.Wait();
                 stringObtained = task.Result;
+                oneCallAPIData= JsonConvert.DeserializeObject<OneCallAPI>(stringObtained);
 
             }
             catch (Exception ex)

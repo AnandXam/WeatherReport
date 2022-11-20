@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.Remoting.Contexts;
 using System.Threading.Tasks;
 using Android;
 using Android.App;
@@ -13,27 +14,31 @@ using Android.Widget;
 using AndroidX.AppCompat.App;
 using AndroidX.Core.App;
 using Com.Airbnb.Lottie;
+using CommunityToolkit.Mvvm.Messaging;
 using Google.Places;
+using Microsoft.Extensions.DependencyInjection;
 using Newtonsoft.Json;
+using Square.Picasso;
 using WeatherReportShared.Model;
+using WeatherReportShared.ViewModel;
 using Xamarin.Essentials;
+using static Android.Service.Voice.VoiceInteractionSession;
+using AlertDialog = Android.App.AlertDialog;
 
 namespace WeatherReport
 {
     [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = false)]
     public class MainActivity : AppCompatActivity
     {
+        public static IServiceProvider Service { get; set; }
         private LottieAnimationView Windanimation, Humidanimation, Feelanimation;
-        string Latitude = "51.509865";
-        string Longitude = "-0.118092";
-        string CityName = "London";
         TextView DateText, TempText, Cityext, SearchPlaceTextview, WeatherDescp, WindText, Humidityext, HowItFeelText;
         ImageView WeatherImage;
         CheckBox MakeDefaultCheckBox;
         CardView SearchPlaceCardview;
         LocationManager locationManager;
-        string provider;
-        static double lat, lng;
+        WeatherViewModel ViewModel { get; set; }
+        BaseViewModel BaseViewModel { get; set; }
         OneCallAPI openWeatherMap = new OneCallAPI();
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -50,25 +55,72 @@ namespace WeatherReport
             this.Feelanimation.PlayAnimation();
             SearchPlaceTextview = FindViewById<TextView>(Resource.Id.SearchPlaceTextview);
             SearchPlaceCardview = FindViewById<CardView>(Resource.Id.SearchPlaceCardview);
-            checkLocationExist();
+            Service = WeatherReportShared.Startup.Init();
+            BaseViewModel = Service.GetService<BaseViewModel>();
+            var connnect = Connectivity.NetworkAccess;
+            BaseViewModel.IsConnected = connnect == NetworkAccess.Internet;
+            ViewModel = Service.GetService<WeatherViewModel>();
+            requestLocationPermission();
             SearchPlaceCardview.Click += PlaceSearchClicked;
             if (!PlacesApi.IsInitialized)
             {
                 PlacesApi.Initialize(this, WeatherReportShared.Utils.Constants.GooglePlace_API_KEY);
             }
-            MakeDefaultCheckBox.Click += (s, e) =>
+            MakeDefaultCheckBox.CheckedChange += (s, e) =>
             {
                 if (MakeDefaultCheckBox.Checked)
                 {
-                    Preferences.Set("LocationLatitude", Latitude);
-                    Preferences.Set("LocationLongitude", Longitude);
-                    Preferences.Set("PlaceName", CityName);
-                }
-                else
-                {
-                    Preferences.Clear();
+                    ViewModel.IsLocationDefaulted = e.IsChecked;
                 }
             };
+
+            this.Cityext = this.FindViewById<TextView>(Resource.Id.Cityext);
+            this.DateText = this.FindViewById<TextView>(Resource.Id.DateText);
+            this.TempText = this.FindViewById<TextView>(Resource.Id.TempText);
+            this.WeatherImage = this.FindViewById<ImageView>(Resource.Id.WeatherImage);
+            this.WeatherDescp = this.FindViewById<TextView>(Resource.Id.WeatherDescp);
+            this.WindText = this.FindViewById<TextView>(Resource.Id.WindText);
+            this.Humidityext = this.FindViewById<TextView>(Resource.Id.Humidityext);
+            this.HowItFeelText = this.FindViewById<TextView>(Resource.Id.HowItFeelText);
+            Cityext.TextChanged += (o, e) => ViewModel.PlaceName = e.Text.ToString();
+            DateText.TextChanged += (o, e) => ViewModel.Data = e.Text.ToString();
+            TempText.TextChanged += (o, e) => ViewModel.Temperature = e.Text.ToString();
+            WeatherDescp.TextChanged += (o, e) => ViewModel.WeatherDescp = e.Text.ToString();
+            WindText.TextChanged += (o, e) => ViewModel.Wind = e.Text.ToString();
+            Humidityext.TextChanged += (o, e) => ViewModel.Humidity = e.Text.ToString();
+            HowItFeelText.TextChanged += (o, e) => ViewModel.FeelsLike = e.Text.ToString();
+            if (!string.IsNullOrEmpty(ViewModel.WeatherImageURL))
+            {
+                Picasso.Get()
+               .Load(ViewModel.WeatherImageURL)
+               .Fit()
+                .CenterCrop()
+               .NoFade()
+               .Into(this.WeatherImage);
+            }
+
+            ViewModel.Setup();
+            ViewModel.PropertyChanged += ViewModel_PropertyChanged;
+        }
+
+        void ViewModel_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
+        {
+            Cityext.Text = ViewModel.PlaceName;
+            DateText.Text = ViewModel.Data;
+            TempText.Text = ViewModel.Temperature;
+            WeatherDescp.Text = ViewModel.WeatherDescp;
+            WindText.Text = ViewModel.Wind;
+            Humidityext.Text = ViewModel.Humidity;
+            HowItFeelText.Text = ViewModel.FeelsLike;
+            if (!string.IsNullOrEmpty(ViewModel.WeatherImageURL))
+            {
+                Picasso.Get()
+               .Load(ViewModel.WeatherImageURL)
+               .Fit()
+                .CenterCrop()
+               .NoFade()
+               .Into(this.WeatherImage);
+            }
         }
 
         private async void PlaceSearchClicked(object sender, System.EventArgs e)
@@ -92,107 +144,71 @@ namespace WeatherReport
                 StartActivityForResult(intent, 0);
             }
         }
-        /// <summary>
-        /// Check any location made default
-        /// </summary>
-        private void checkLocationExist()
-        {
-            var myValue = Preferences.Get("LocationLatitude", "default_value");
-            if (myValue != "default_value")
-            {
-                new GetWeather(this, openWeatherMap).Execute(WeatherReportShared.Utils.Helper.APIRequest(Preferences.Get("LocationLatitude", "default_value"), Preferences.Get("LocationLongitude", "default_value")));
-                this.MakeDefaultCheckBox = FindViewById<CheckBox>(Resource.Id.MakeDefaultCheckBox);
-                MakeDefaultCheckBox.Checked = true;
-                SearchPlaceTextview.Text = Preferences.Get("PlaceName", "default_value");
-            }
-            else
-            {
-                new GetWeather(this, openWeatherMap).Execute(WeatherReportShared.Utils.Helper.APIRequest(Latitude, Longitude));
-                this.MakeDefaultCheckBox = FindViewById<CheckBox>(Resource.Id.MakeDefaultCheckBox);
-                MakeDefaultCheckBox.Checked = false;
-            }
 
-        }
-
-        /// <summary>
-        /// Assigning latitude and longitude to OpenweatherAPI
-        /// </summary>
-        /// <param name="requestCode"></param>
-        /// <param name="resultCode"></param>
-        /// <param name="data"></param>
         protected override void OnActivityResult(int requestCode, [GeneratedEnum] Result resultCode, Intent data)
         {
             base.OnActivityResult(requestCode, resultCode, data);
             var place = Autocomplete.GetPlaceFromIntent(data);
-            new GetWeather(this, openWeatherMap).Execute(WeatherReportShared.Utils.Helper.APIRequest(place.LatLng.Latitude.ToString(), place.LatLng.Longitude.ToString()));
-            Latitude = place.LatLng.Latitude.ToString();
-            Longitude = place.LatLng.Longitude.ToString();
-            CityName = place.Name;
+            ViewModel.Latitude = place.LatLng.Latitude;
+            ViewModel.Latitude = place.LatLng.Longitude;
+            ViewModel.PlaceName = place.Name;
             SearchPlaceTextview.Text = place.Name;
+            ViewModel.getWeatherData();
         }
-
-        /// <summary>
-        /// Fetching weather details
-        /// From Open weather API
-        /// </summary>
-        private class GetWeather : AsyncTask<string, Java.Lang.Void, string>
-        {
-            private MainActivity activity;
-            OneCallAPI openWeatherMap;
-            public GetWeather(MainActivity activity, OneCallAPI openWeatherMap)
-            {
-                this.activity = activity;
-                this.openWeatherMap = openWeatherMap;
-            }
-            protected override string RunInBackground(params string[] @params)
-            {
-                string stream = null;
-                string urlString = @params[0];
-                WeatherReportShared.APIHandler.RestHelper http = new WeatherReportShared.APIHandler.RestHelper();
-                stream = http.GetHTTPData(urlString);
-                return stream;
-            }
-            protected override void OnPostExecute(string result)
-            {
-                base.OnPostExecute(result);
-                if (result.Contains("Error: Not City Found"))
-                {
-                    return;
-                }
-                openWeatherMap = JsonConvert.DeserializeObject<OneCallAPI>(result);
-                activity.Cityext = activity.FindViewById<TextView>(Resource.Id.Cityext);
-                activity.DateText = activity.FindViewById<TextView>(Resource.Id.DateText);
-                activity.TempText = activity.FindViewById<TextView>(Resource.Id.TempText);
-                activity.WeatherImage = activity.FindViewById<ImageView>(Resource.Id.WeatherImage);
-                activity.WeatherDescp = activity.FindViewById<TextView>(Resource.Id.WeatherDescp);
-                activity.WindText = activity.FindViewById<TextView>(Resource.Id.WindText);
-                activity.Humidityext = activity.FindViewById<TextView>(Resource.Id.Humidityext);
-                activity.HowItFeelText = activity.FindViewById<TextView>(Resource.Id.HowItFeelText);
-
-                activity.Cityext.Text = $"{openWeatherMap.timezone}";
-                activity.WeatherDescp.Text = $"{openWeatherMap.current.weather[0].main}";
-                activity.WindText.Text = $"{openWeatherMap.current.wind_speed} miles/h";
-                activity.Humidityext.Text = $"{openWeatherMap.current.humidity} %";
-                activity.HowItFeelText.Text = $"{openWeatherMap.current.feels_like} °F";
-                activity.DateText.Text = $"{DateTime.Now.ToString("dd MMMM yyyy")}";
-                activity.TempText.Text = $"{openWeatherMap.current.temp} °F";
-                if (!string.IsNullOrEmpty(openWeatherMap.current.weather[0].icon_url))
-                {
-                    //Picasso.Get()
-                    //.Load(openWeatherMap.current.weather[0].icon_url)
-                    //.Fit()
-                    //.CenterCrop()
-                    //.NoFade()
-                    //.Into(activity.WeatherImage);
-                }
-            }
-        }
-
+        
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {
             Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
 
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+        }
+
+        /// <summary>
+        /// Requesting location permission
+        /// </summary>
+        public void requestLocationPermission()
+        {
+            Task.Run(() =>
+                RunOnUiThread(async () =>
+                {
+                    try
+                    {
+                        var status = await Permissions.CheckStatusAsync<Permissions.LocationWhenInUse>();
+                        if (status == PermissionStatus.Granted)
+                        {
+                            ViewModel.Location = await Geolocation.GetLastKnownLocationAsync();
+                            if (ViewModel.Latitude == 0 && ViewModel.Longitude == 0)
+                            {
+                                ViewModel.Location = await Geolocation.GetLocationAsync(new GeolocationRequest
+                                {
+                                    DesiredAccuracy = GeolocationAccuracy.Medium,
+                                    Timeout = TimeSpan.FromSeconds(15)
+                                });
+                            }
+                        }
+                        else
+                        {
+                            status = await Permissions.RequestAsync<Permissions.LocationWhenInUse>();
+                            if (status == PermissionStatus.Granted)
+                            {
+                                ViewModel.Location = await Geolocation.GetLastKnownLocationAsync();
+                                if (ViewModel.Location == null)
+                                {
+                                    ViewModel.Location = await Geolocation.GetLocationAsync(new GeolocationRequest
+                                    {
+                                        DesiredAccuracy = GeolocationAccuracy.Medium,
+                                        Timeout = TimeSpan.FromSeconds(15)
+                                    });
+                                }
+                            }
+                        }
+                    }
+                    catch (Exception)
+                    {
+
+                    }
+                                     
+                }));
         }
     }
 }

@@ -1,0 +1,45 @@
+﻿<Properties GitUserInfo="UsingGIT" StartupConfiguration="{E9824600-EB74-44D2-BA9F-FD814308F13C}|Default">
+  <MonoDevelop.MonoDroid LastDeploySdkVersion="13.1.0.1" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="WeatherReport/Activities/MainActivity.cs">
+    <Files>
+      <File FileName="WeatherReportShared/APIHandler/RestHelper.cs" />
+      <File FileName="WeatherReportShared/ViewModel/BaseViewModel.cs" Line="1" Column="1" />
+      <File FileName="WeatherReport/Activities/MainActivity.cs" Line="63" Column="41" />
+      <File FileName="WeatherReportShared/Startup.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="WeatherReport" expanded="True">
+            <Node name="WeatherReport.Android" expanded="True">
+              <Node name="Activities" expanded="True" />
+              <Node name="Resources" expanded="True">
+                <Node name="layout" expanded="True">
+                  <Node name="activity_main.xml" selected="True" />
+                </Node>
+              </Node>
+            </Node>
+            <Node name="WeatherReportShared" expanded="True">
+              <Node name="APIHandler" expanded="True" />
+              <Node name="Helpers" expanded="True" />
+              <Node name="Interfaces" expanded="True" />
+              <Node name="Model" expanded="True" />
+              <Node name="Services" expanded="True" />
+              <Node name="Utils" expanded="True" />
+              <Node name="ViewModel" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.WeatherReport.ios PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget." />
+  <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.pixel_6_pro" />
+  <MonoDevelop.Ide.ItemProperties.WeatherReport.Android AndroidDesignerPreferredTheme="AppTheme" AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.pixel_6_pro" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+</Properties>

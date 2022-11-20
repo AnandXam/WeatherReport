@@ -10,13 +10,29 @@
     <None Remove="Newtonsoft.Json" />
     <None Remove="Model\" />
     <None Remove="APIHelper\" />
+    <None Remove="Helpers\" />
+    <None Remove="Services\" />
+    <None Remove="Interfaces\" />
+    <None Remove="ViewModel\" />
+    <None Remove="Xamarin.CommunityToolkit" />
+    <None Remove="CommunityToolkit.Mvvm" />
+    <None Remove="Microsoft.Extensions.DependencyInjection" />
+    <None Remove="Xamarin.Essentials" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Utils\" />
     <Folder Include="Model\" />
     <Folder Include="APIHandler\" />
+    <Folder Include="Helpers\" />
+    <Folder Include="Services\" />
+    <Folder Include="Interfaces\" />
+    <Folder Include="ViewModel\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="Xamarin.CommunityToolkit" Version="2.0.5" />
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.7.3" />
   </ItemGroup>
 </Project>
