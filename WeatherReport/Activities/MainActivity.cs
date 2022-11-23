@@ -150,7 +150,7 @@ namespace WeatherReport
             base.OnActivityResult(requestCode, resultCode, data);
             var place = Autocomplete.GetPlaceFromIntent(data);
             ViewModel.Latitude = place.LatLng.Latitude;
-            ViewModel.Latitude = place.LatLng.Longitude;
+            ViewModel.Longitude = place.LatLng.Longitude;
             ViewModel.PlaceName = place.Name;
             SearchPlaceTextview.Text = place.Name;
             ViewModel.getWeatherData();
@@ -168,47 +168,45 @@ namespace WeatherReport
         /// </summary>
         public void requestLocationPermission()
         {
-            Task.Run(() =>
-                RunOnUiThread(async () =>
-                {
-                    try
-                    {
-                        var status = await Permissions.CheckStatusAsync<Permissions.LocationWhenInUse>();
-                        if (status == PermissionStatus.Granted)
-                        {
-                            ViewModel.Location = await Geolocation.GetLastKnownLocationAsync();
-                            if (ViewModel.Latitude == 0 && ViewModel.Longitude == 0)
-                            {
-                                ViewModel.Location = await Geolocation.GetLocationAsync(new GeolocationRequest
-                                {
-                                    DesiredAccuracy = GeolocationAccuracy.Medium,
-                                    Timeout = TimeSpan.FromSeconds(15)
-                                });
-                            }
-                        }
-                        else
-                        {
-                            status = await Permissions.RequestAsync<Permissions.LocationWhenInUse>();
-                            if (status == PermissionStatus.Granted)
-                            {
-                                ViewModel.Location = await Geolocation.GetLastKnownLocationAsync();
-                                if (ViewModel.Location == null)
-                                {
-                                    ViewModel.Location = await Geolocation.GetLocationAsync(new GeolocationRequest
-                                    {
-                                        DesiredAccuracy = GeolocationAccuracy.Medium,
-                                        Timeout = TimeSpan.FromSeconds(15)
-                                    });
-                                }
-                            }
-                        }
-                    }
-                    catch (Exception)
-                    {
+          
+           Task.Run(async () => {
+               try
+               {
+                   var status = await Permissions.CheckStatusAsync<Permissions.LocationWhenInUse>();
+                   if (status == PermissionStatus.Granted)
+                   {
+                       ViewModel.Location = await Geolocation.GetLastKnownLocationAsync();
+                       if (ViewModel.Latitude == 0 && ViewModel.Longitude == 0)
+                       {
+                           ViewModel.Location = await Geolocation.GetLocationAsync(new GeolocationRequest
+                           {
+                               DesiredAccuracy = GeolocationAccuracy.Medium,
+                               Timeout = TimeSpan.FromSeconds(15)
+                           });
+                       }
+                   }
+                   else
+                   {
+                       status = await Permissions.RequestAsync<Permissions.LocationWhenInUse>();
+                       if (status == PermissionStatus.Granted)
+                       {
+                           ViewModel.Location = await Geolocation.GetLastKnownLocationAsync();
+                           if (ViewModel.Location == null)
+                           {
+                               ViewModel.Location = await Geolocation.GetLocationAsync(new GeolocationRequest
+                               {
+                                   DesiredAccuracy = GeolocationAccuracy.Medium,
+                                   Timeout = TimeSpan.FromSeconds(15)
+                               });
+                           }
+                       }
+                   }
+               }
+               catch (Exception)
+               {
 
-                    }
-                                     
-                }));
+               }
+           });
         }
     }
 }

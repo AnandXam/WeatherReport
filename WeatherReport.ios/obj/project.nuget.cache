@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "nhYdQGRX5/8kDIFvY5afn1AUXxBzLXZA79W9yi0WCpQ3WDVELDsuy/tumUf7ZQPniNCidMUbGlXgS8+fttOhAQ==",
+  "dgSpecHash": "lAxb9xE4K+w/VVLDbXxJM36gINYxpVzVI8Q1WQ5H06nkwnvv8THsp+GlwDANaVsSzbmhDUf++dqsm8vX0wjqSw==",
   "success": true,
   "projectFilePath": "/Users/anand/Documents/WeatherReport/WeatherReport.ios/WeatherReport.ios.csproj",
   "expectedPackageFiles": [
+    "/Users/anand/.nuget/packages/com.airbnb.ios.lottie/2.5.13/com.airbnb.ios.lottie.2.5.13.nupkg.sha512",
     "/Users/anand/.nuget/packages/communitytoolkit.mvvm/8.0.0/communitytoolkit.mvvm.8.0.0.nupkg.sha512",
     "/Users/anand/.nuget/packages/microsoft.extensions.dependencyinjection/7.0.0/microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
     "/Users/anand/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/7.0.0/microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",

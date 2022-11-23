@@ -15,8 +15,8 @@ namespace WeatherReportShared.ViewModel
 
         public void Setup()
         {
-            var lastUsedLatitude = Preferences.Get("LocationLatitude", 0);
-            var lastUsedLongitude = Preferences.Get("LocationLongitude", 0);
+            var lastUsedLatitude =  Preferences.Get("LocationLatitude",0.0);
+            var lastUsedLongitude = Preferences.Get("LocationLongitude",0.0);
             if (lastUsedLatitude != 0&& lastUsedLongitude != 0)
             {
                 Latitude = lastUsedLatitude;
@@ -174,7 +174,7 @@ namespace WeatherReportShared.ViewModel
         /// </summary>
         public async void getWeatherData()
         {
-            var data = await webservice.GetWeatherForLocation(Latitude,Longitude);
+            var data = await webservice.GetWeatherForLocation(Longitude,Latitude);
             if (data != null)
             {
                 WeatherData = data;

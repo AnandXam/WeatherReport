@@ -1,5 +1,9 @@
-﻿using Foundation;
+﻿using System;
+using Foundation;
+using Microsoft.Extensions.DependencyInjection;
 using UIKit;
+using WeatherReportShared.ViewModel;
+using Xamarin.Essentials;
 
 namespace WeatherReport.ios
 {
@@ -10,13 +14,28 @@ namespace WeatherReport.ios
     
         [Export("window")]
         public UIWindow Window { get; set; }
+        public static IServiceProvider Service { get; set; }
+        WeatherViewModel weatherViewModel { get; set; }
+        public static AppDelegate Self { get; private set; }
 
         [Export ("application:didFinishLaunchingWithOptions:")]
         public bool FinishedLaunching (UIApplication application, NSDictionary launchOptions)
         {
+            AppDelegate.Self = this;
+            Service = WeatherReportShared.Startup.Init();
+            weatherViewModel = Service.GetService<WeatherViewModel>();
+            var connnect = (Connectivity.NetworkAccess == NetworkAccess.Internet) || (Connectivity.NetworkAccess == NetworkAccess.Local);
+            weatherViewModel.IsConnected = connnect;
+            Connectivity.ConnectivityChanged += Connectivity_ConnectivityChanged;
+
             // Override point for customization after application launch.
             // If not required for your application you can safely delete this method
             return true;
+        }
+
+        void Connectivity_ConnectivityChanged(object sender, ConnectivityChangedEventArgs e)
+        {
+            weatherViewModel.IsConnected = Convert.ToBoolean(e.NetworkAccess);
         }
 
         // UISceneSession Lifecycle
