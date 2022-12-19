@@ -7,3 +7,12 @@
 /Users/anand/Documents/WeatherReport/WeatherReportShared/obj/Debug/netstandard2.1/WeatherReportShared.csproj.CoreCompileInputs.cache
 /Users/anand/Documents/WeatherReport/WeatherReportShared/obj/Debug/netstandard2.1/WeatherReportShared.dll
 /Users/anand/Documents/WeatherReport/WeatherReportShared/obj/Debug/netstandard2.1/WeatherReportShared.pdb
+/Users/anandraj/Projects/WeatherReport/WeatherReportShared/bin/Debug/netstandard2.1/WeatherReportShared.deps.json
+/Users/anandraj/Projects/WeatherReport/WeatherReportShared/bin/Debug/netstandard2.1/WeatherReportShared.dll
+/Users/anandraj/Projects/WeatherReport/WeatherReportShared/bin/Debug/netstandard2.1/WeatherReportShared.pdb
+/Users/anandraj/Projects/WeatherReport/WeatherReportShared/obj/Debug/netstandard2.1/WeatherReportShared.csproj.AssemblyReference.cache
+/Users/anandraj/Projects/WeatherReport/WeatherReportShared/obj/Debug/netstandard2.1/WeatherReportShared.AssemblyInfoInputs.cache
+/Users/anandraj/Projects/WeatherReport/WeatherReportShared/obj/Debug/netstandard2.1/WeatherReportShared.AssemblyInfo.cs
+/Users/anandraj/Projects/WeatherReport/WeatherReportShared/obj/Debug/netstandard2.1/WeatherReportShared.csproj.CoreCompileInputs.cache
+/Users/anandraj/Projects/WeatherReport/WeatherReportShared/obj/Debug/netstandard2.1/WeatherReportShared.dll
+/Users/anandraj/Projects/WeatherReport/WeatherReportShared/obj/Debug/netstandard2.1/WeatherReportShared.pdb

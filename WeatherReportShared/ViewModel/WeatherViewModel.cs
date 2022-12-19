@@ -15,12 +15,12 @@ namespace WeatherReportShared.ViewModel
 
         public void Setup()
         {
-            var lastUsedLatitude =  Preferences.Get("LocationLatitude",0.0);
-            var lastUsedLongitude = Preferences.Get("LocationLongitude",0.0);
-            if (lastUsedLatitude != 0&& lastUsedLongitude != 0)
+            var lastUsedLatitude = Preferences.Get("LocationLatitude", 0.0);
+            var lastUsedLongitude = Preferences.Get("LocationLongitude", 0.0);
+            if (lastUsedLatitude != 0 && lastUsedLongitude != 0)
             {
                 Latitude = lastUsedLatitude;
-                Longitude = lastUsedLongitude;              
+                Longitude = lastUsedLongitude;
             }
             getWeatherData();
         }
@@ -150,8 +150,8 @@ namespace WeatherReportShared.ViewModel
 
         void DisplayPlace()
         {
-            PlaceName = $"{WeatherData.timezone}";
             WeatherDescp = $"{WeatherData.current.weather[0].main}";
+            PlaceName = $"{WeatherData.timezone}";
             Wind = $"{WeatherData.current.wind_speed} miles/h";
             Humidity = $"{WeatherData.current.humidity} %";
             FeelsLike = $"{WeatherData.current.feels_like} °F";
@@ -174,7 +174,7 @@ namespace WeatherReportShared.ViewModel
         /// </summary>
         public async void getWeatherData()
         {
-            var data = await webservice.GetWeatherForLocation(Longitude,Latitude);
+            var data = await webservice.GetWeatherForLocation(Longitude, Latitude);
             if (data != null)
             {
                 WeatherData = data;
@@ -192,7 +192,8 @@ namespace WeatherReportShared.ViewModel
             Preferences.Set("LocationLongitude", Longitude);
             Preferences.Set("PlaceName", PlaceName);
 
-        }   
+        }
     }
 }
 
+ 

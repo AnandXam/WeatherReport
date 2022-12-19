@@ -1,4 +1,5 @@
 ﻿using Foundation;
+using Google.Places;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Net.NetworkInformation;
@@ -7,10 +8,11 @@ using UIKit;
 using WeatherReportShared.Model;
 using WeatherReportShared.ViewModel;
 using Xamarin.Essentials;
+using Xamarin.Forms;
 
 namespace WeatherReport.ios
 {
-    public partial class ViewController : UIViewController
+    public partial class ViewController : UIViewController, IAutocompleteViewControllerDelegate
     {
         WeatherViewModel ViewModel { get; set; }
         OneCallAPI openWeatherMap = new OneCallAPI();
@@ -25,23 +27,40 @@ namespace WeatherReport.ios
             base.ViewDidLoad();
 
             ViewModel = AppDelegate.Service.GetService<WeatherViewModel>();
-
             GetLocation();
-
-            Cityext.ValueChanged += (o, e) => ViewModel.PlaceName = ((UITextView)o).Text;
-            DateText.ValueChanged += (o, e) => ViewModel.Data = ((UITextView)o).Text;
-            TempText.ValueChanged += (o, e) => ViewModel.Temperature = ((UITextView)o).Text;
-            WeatherDescp.ValueChanged += (o, e) => ViewModel.WeatherDescp = ((UITextView)o).Text;
             ViewModel.Setup();
+            DateLabel.Text = ViewModel.Data;
+            TempLabel.Text = ViewModel.Temperature;
+            WeatherDesLabel.Text = ViewModel.WeatherDescp;
+            LocationLabel.Text = ViewModel.PlaceName;
             ViewModel.PropertyChanged += ViewModel_PropertyChanged;
+            IsDefaultSwitch.ValueChanged += (o, e) =>
+            {
+                if (IsDefaultSwitch.On)
+                {
+                    ViewModel.IsLocationDefaulted = ((UISwitch)o).On;
+
+                }
+            };
+            UITapGestureRecognizer tapGesture = new UITapGestureRecognizer(Tap);
+            tapGesture.NumberOfTapsRequired = 1;
+            LocationSearchView.AddGestureRecognizer(tapGesture);
+        }
+
+        void Tap(UITapGestureRecognizer tap1)
+        {
+            var autocompleteViewController = new AutocompleteViewController { Delegate = this };
+            PresentViewController(autocompleteViewController, true, null);
         }
 
         void ViewModel_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
         {
-            Cityext.Text = ViewModel.PlaceName;
-            DateText.Text = ViewModel.Data;
-            TempText.Text = ViewModel.Temperature;
-            WeatherDescp.Text = ViewModel.WeatherDescp;
+            DateLabel.Text = ViewModel.Data;
+            TempLabel.Text = ViewModel.Temperature;
+            WeatherDesLabel.Text = ViewModel.WeatherDescp;
+            LocationLabel.Text = ViewModel.PlaceName;
+            if (!string.IsNullOrEmpty(ViewModel.WeatherImageURL))
+            { WeatherImage.Image = FromUrl(ViewModel.WeatherImageURL); }              
         }
 
         public override void DidReceiveMemoryWarning ()
@@ -92,9 +111,56 @@ namespace WeatherReport.ios
                             }
                         }
                     }
-                    catch(Exception ex) { }
+                    catch(Exception ex)
+                    { }
 
                 }));
         }
+        static UIImage FromUrl(string uri)
+        {
+            using (var url = new NSUrl(uri))
+            using (var data = NSData.FromUrl(url))
+                return UIImage.LoadFromData(data);
+        }
+
+        #region AutocompleteViewController Delegate
+
+        public void DidAutocomplete(AutocompleteViewController viewController, Place place)
+        {
+            // Handle the user's selection.
+            DismissViewController(true, null);
+            LocationSearchView.Text = place.Name;
+            Console.WriteLine($"Place name: {place.Name}");
+            ViewModel.Latitude = place.Coordinate.Latitude;
+            ViewModel.Longitude = place.Coordinate.Longitude;
+        }
+
+        public void DidFailAutocomplete(AutocompleteViewController viewController, NSError error)
+        {
+            // TODO: handle the error.
+            DismissViewController(true, null);
+        }
+
+        // User canceled the operation.
+        public void WasCancelled(AutocompleteViewController viewController)
+        {
+            DismissViewController(true, null);
+        }
+
+        // Turn the network activity indicator on and off again.
+        [Export("didRequestAutocompletePredictions:")]
+        public void DidRequestAutocompletePredictions(AutocompleteViewController viewController)
+        {
+            UIApplication.SharedApplication.NetworkActivityIndicatorVisible = true;
+        }
+
+        [Export("didUpdateAutocompletePredictions:")]
+        public void DidUpdateAutocompletePredictions(AutocompleteViewController viewController)
+        {
+            UIApplication.SharedApplication.NetworkActivityIndicatorVisible = false;
+        }
+
+        #endregion
     }
 }
+ 

@@ -108,6 +108,13 @@
           }
         }
       },
+      "Xamarin.Build.Download/0.11.0": {
+        "type": "package",
+        "build": {
+          "buildTransitive/Xamarin.Build.Download.props": {},
+          "buildTransitive/Xamarin.Build.Download.targets": {}
+        }
+      },
       "Xamarin.CommunityToolkit/2.0.5": {
         "type": "package",
         "dependencies": {
@@ -285,6 +292,55 @@
         "build": {
           "buildTransitive/Xamarin.Forms.props": {},
           "buildTransitive/Xamarin.Forms.targets": {}
+        }
+      },
+      "Xamarin.Google.iOS.Maps/6.0.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Build.Download": "0.11.0"
+        },
+        "frameworkAssemblies": [
+          "System",
+          "System.Core",
+          "System.Numerics",
+          "System.Numerics.Vectors",
+          "System.Xml",
+          "Xamarin.iOS",
+          "mscorlib"
+        ],
+        "compile": {
+          "lib/xamarinios10/Google.Maps.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/Google.Maps.dll": {}
+        },
+        "build": {
+          "buildTransitive/Xamarin.Google.iOS.Maps.targets": {}
+        }
+      },
+      "Xamarin.Google.iOS.Places/6.0.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Build.Download": "0.11.0",
+          "Xamarin.Google.iOS.Maps": "6.0.1.1"
+        },
+        "frameworkAssemblies": [
+          "System",
+          "System.Core",
+          "System.Numerics",
+          "System.Numerics.Vectors",
+          "System.Xml",
+          "Xamarin.iOS",
+          "mscorlib"
+        ],
+        "compile": {
+          "lib/xamarinios10/Google.Places.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/Google.Places.dll": {}
+        },
+        "build": {
+          "buildTransitive/Xamarin.Google.iOS.Places.targets": {}
         }
       },
       "WeatherReportShared/1.0.0": {
@@ -412,6 +468,13 @@
           }
         }
       },
+      "Xamarin.Build.Download/0.11.0": {
+        "type": "package",
+        "build": {
+          "buildTransitive/Xamarin.Build.Download.props": {},
+          "buildTransitive/Xamarin.Build.Download.targets": {}
+        }
+      },
       "Xamarin.CommunityToolkit/2.0.5": {
         "type": "package",
         "dependencies": {
@@ -589,6 +652,55 @@
         "build": {
           "buildTransitive/Xamarin.Forms.props": {},
           "buildTransitive/Xamarin.Forms.targets": {}
+        }
+      },
+      "Xamarin.Google.iOS.Maps/6.0.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Build.Download": "0.11.0"
+        },
+        "frameworkAssemblies": [
+          "System",
+          "System.Core",
+          "System.Numerics",
+          "System.Numerics.Vectors",
+          "System.Xml",
+          "Xamarin.iOS",
+          "mscorlib"
+        ],
+        "compile": {
+          "lib/xamarinios10/Google.Maps.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/Google.Maps.dll": {}
+        },
+        "build": {
+          "buildTransitive/Xamarin.Google.iOS.Maps.targets": {}
+        }
+      },
+      "Xamarin.Google.iOS.Places/6.0.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Build.Download": "0.11.0",
+          "Xamarin.Google.iOS.Maps": "6.0.1.1"
+        },
+        "frameworkAssemblies": [
+          "System",
+          "System.Core",
+          "System.Numerics",
+          "System.Numerics.Vectors",
+          "System.Xml",
+          "Xamarin.iOS",
+          "mscorlib"
+        ],
+        "compile": {
+          "lib/xamarinios10/Google.Places.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/Google.Places.dll": {}
+        },
+        "build": {
+          "buildTransitive/Xamarin.Google.iOS.Places.targets": {}
         }
       },
       "WeatherReportShared/1.0.0": {
@@ -716,6 +828,13 @@
           }
         }
       },
+      "Xamarin.Build.Download/0.11.0": {
+        "type": "package",
+        "build": {
+          "buildTransitive/Xamarin.Build.Download.props": {},
+          "buildTransitive/Xamarin.Build.Download.targets": {}
+        }
+      },
       "Xamarin.CommunityToolkit/2.0.5": {
         "type": "package",
         "dependencies": {
@@ -893,6 +1012,55 @@
         "build": {
           "buildTransitive/Xamarin.Forms.props": {},
           "buildTransitive/Xamarin.Forms.targets": {}
+        }
+      },
+      "Xamarin.Google.iOS.Maps/6.0.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Build.Download": "0.11.0"
+        },
+        "frameworkAssemblies": [
+          "System",
+          "System.Core",
+          "System.Numerics",
+          "System.Numerics.Vectors",
+          "System.Xml",
+          "Xamarin.iOS",
+          "mscorlib"
+        ],
+        "compile": {
+          "lib/xamarinios10/Google.Maps.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/Google.Maps.dll": {}
+        },
+        "build": {
+          "buildTransitive/Xamarin.Google.iOS.Maps.targets": {}
+        }
+      },
+      "Xamarin.Google.iOS.Places/6.0.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Build.Download": "0.11.0",
+          "Xamarin.Google.iOS.Maps": "6.0.1.1"
+        },
+        "frameworkAssemblies": [
+          "System",
+          "System.Core",
+          "System.Numerics",
+          "System.Numerics.Vectors",
+          "System.Xml",
+          "Xamarin.iOS",
+          "mscorlib"
+        ],
+        "compile": {
+          "lib/xamarinios10/Google.Places.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/Google.Places.dll": {}
+        },
+        "build": {
+          "buildTransitive/Xamarin.Google.iOS.Places.targets": {}
         }
       },
       "WeatherReportShared/1.0.0": {
@@ -1020,6 +1188,13 @@
           }
         }
       },
+      "Xamarin.Build.Download/0.11.0": {
+        "type": "package",
+        "build": {
+          "buildTransitive/Xamarin.Build.Download.props": {},
+          "buildTransitive/Xamarin.Build.Download.targets": {}
+        }
+      },
       "Xamarin.CommunityToolkit/2.0.5": {
         "type": "package",
         "dependencies": {
@@ -1197,6 +1372,55 @@
         "build": {
           "buildTransitive/Xamarin.Forms.props": {},
           "buildTransitive/Xamarin.Forms.targets": {}
+        }
+      },
+      "Xamarin.Google.iOS.Maps/6.0.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Build.Download": "0.11.0"
+        },
+        "frameworkAssemblies": [
+          "System",
+          "System.Core",
+          "System.Numerics",
+          "System.Numerics.Vectors",
+          "System.Xml",
+          "Xamarin.iOS",
+          "mscorlib"
+        ],
+        "compile": {
+          "lib/xamarinios10/Google.Maps.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/Google.Maps.dll": {}
+        },
+        "build": {
+          "buildTransitive/Xamarin.Google.iOS.Maps.targets": {}
+        }
+      },
+      "Xamarin.Google.iOS.Places/6.0.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Build.Download": "0.11.0",
+          "Xamarin.Google.iOS.Maps": "6.0.1.1"
+        },
+        "frameworkAssemblies": [
+          "System",
+          "System.Core",
+          "System.Numerics",
+          "System.Numerics.Vectors",
+          "System.Xml",
+          "Xamarin.iOS",
+          "mscorlib"
+        ],
+        "compile": {
+          "lib/xamarinios10/Google.Places.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/Google.Places.dll": {}
+        },
+        "build": {
+          "buildTransitive/Xamarin.Google.iOS.Places.targets": {}
         }
       },
       "WeatherReportShared/1.0.0": {
@@ -1517,6 +1741,28 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "Xamarin.Build.Download/0.11.0": {
+      "sha512": "35/X1Lz4KNoD0VjmDRO/Ap8U823odTUVWGnAmdoweFvjbE3CJ+B8zzOAp+MzvheuEBYlGfX5P4gjvLRZhVTCDg==",
+      "type": "package",
+      "path": "xamarin.build.download/0.11.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "THIRD-PARTY-NOTICE.txt",
+        "build/Microsoft.Win32.Registry.dll",
+        "build/Newtonsoft.Json.dll",
+        "build/Xamarin.Build.Download.dll",
+        "build/Xamarin.Build.Download.props",
+        "build/Xamarin.Build.Download.targets",
+        "buildTransitive/Microsoft.Win32.Registry.dll",
+        "buildTransitive/Newtonsoft.Json.dll",
+        "buildTransitive/Xamarin.Build.Download.dll",
+        "buildTransitive/Xamarin.Build.Download.props",
+        "buildTransitive/Xamarin.Build.Download.targets",
+        "xamarin.build.download.0.11.0.nupkg.sha512",
+        "xamarin.build.download.nuspec"
+      ]
+    },
     "Xamarin.CommunityToolkit/2.0.5": {
       "sha512": "8oFY5ZrKoIOCqtTeRh+jx5TAcs177TU0pEoefMWRptrq+TZoKwsPNg7L8lBtLSP+2ymg4VBn8i/6chA6b4mGdQ==",
       "type": "package",
@@ -1816,6 +2062,40 @@
         "xamarin.forms.nuspec"
       ]
     },
+    "Xamarin.Google.iOS.Maps/6.0.1.1": {
+      "sha512": "Rbujx2MO4XdsJ+UOJwvGpGbwI//6ZZcsVdiVqClq+zSOHjilQC+XWR4KM7RyKeSHU94vOmaoFtmeSmRyt52wsQ==",
+      "type": "package",
+      "path": "xamarin.google.ios.maps/6.0.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "License.md",
+        "build/Xamarin.Google.iOS.Maps.targets",
+        "buildTransitive/Xamarin.Google.iOS.Maps.targets",
+        "googleiosmaps_128x128.png",
+        "lib/net6.0-ios15.4/Google.Maps.dll",
+        "lib/xamarinios10/Google.Maps.dll",
+        "xamarin.google.ios.maps.6.0.1.1.nupkg.sha512",
+        "xamarin.google.ios.maps.nuspec"
+      ]
+    },
+    "Xamarin.Google.iOS.Places/6.0.0.1": {
+      "sha512": "macs/4AeDsJ9FhYhzzDu9XSnE6GE2c9r4oLKp7SXsJa9iqk0h2/eVPPH0xUqMP2ER1yjOd30kr0g1Q5JAyMhtg==",
+      "type": "package",
+      "path": "xamarin.google.ios.places/6.0.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "License.md",
+        "build/Xamarin.Google.iOS.Places.targets",
+        "buildTransitive/Xamarin.Google.iOS.Places.targets",
+        "googleiosplaces_128x128.png",
+        "lib/net6.0-ios15.4/Google.Places.dll",
+        "lib/xamarinios10/Google.Places.dll",
+        "xamarin.google.ios.places.6.0.0.1.nupkg.sha512",
+        "xamarin.google.ios.places.nuspec"
+      ]
+    },
     "WeatherReportShared/1.0.0": {
       "type": "project",
       "path": "../WeatherReportShared/WeatherReportShared.csproj",
@@ -1827,24 +2107,25 @@
       "Com.Airbnb.iOS.Lottie >= 2.5.13",
       "Newtonsoft.Json >= 13.0.1",
       "WeatherReportShared >= 1.0.0",
-      "Xamarin.Essentials >= 1.7.3"
+      "Xamarin.Essentials >= 1.7.3",
+      "Xamarin.Google.iOS.Places >= 6.0.0.1"
     ]
   },
   "packageFolders": {
-    "/Users/anand/.nuget/packages/": {}
+    "/Users/anandraj/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/anand/Documents/WeatherReport/WeatherReport.ios/WeatherReport.ios.csproj",
+      "projectUniqueName": "/Users/anandraj/Projects/WeatherReport/WeatherReport.ios/WeatherReport.ios.csproj",
       "projectName": "WeatherReport.ios",
-      "projectPath": "/Users/anand/Documents/WeatherReport/WeatherReport.ios/WeatherReport.ios.csproj",
-      "packagesPath": "/Users/anand/.nuget/packages/",
-      "outputPath": "/Users/anand/Documents/WeatherReport/WeatherReport.ios/obj/",
+      "projectPath": "/Users/anandraj/Projects/WeatherReport/WeatherReport.ios/WeatherReport.ios.csproj",
+      "packagesPath": "/Users/anandraj/.nuget/packages/",
+      "outputPath": "/Users/anandraj/Projects/WeatherReport/WeatherReport.ios/obj/",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
-        "/Users/anand/.config/NuGet/NuGet.Config"
+        "/Users/anandraj/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "xamarinios10"
@@ -1855,8 +2136,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "/Users/anand/Documents/WeatherReport/WeatherReportShared/WeatherReportShared.csproj": {
-              "projectPath": "/Users/anand/Documents/WeatherReport/WeatherReportShared/WeatherReportShared.csproj"
+            "/Users/anandraj/Projects/WeatherReport/WeatherReportShared/WeatherReportShared.csproj": {
+              "projectPath": "/Users/anandraj/Projects/WeatherReport/WeatherReportShared/WeatherReportShared.csproj"
             }
           }
         }
@@ -1876,6 +2157,10 @@
           "Xamarin.Essentials": {
             "target": "Package",
             "version": "[1.7.3, )"
+          },
+          "Xamarin.Google.iOS.Places": {
+            "target": "Package",
+            "version": "[6.0.0.1, )"
           }
         }
       }

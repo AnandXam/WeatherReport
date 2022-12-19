@@ -6942,20 +6942,20 @@
     ]
   },
   "packageFolders": {
-    "/Users/anand/.nuget/packages/": {}
+    "/Users/anandraj/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/anand/Documents/WeatherReport/WeatherReport/WeatherReport.Android.csproj",
+      "projectUniqueName": "/Users/anandraj/Projects/WeatherReport/WeatherReport/WeatherReport.Android.csproj",
       "projectName": "WeatherReport",
-      "projectPath": "/Users/anand/Documents/WeatherReport/WeatherReport/WeatherReport.Android.csproj",
-      "packagesPath": "/Users/anand/.nuget/packages/",
-      "outputPath": "/Users/anand/Documents/WeatherReport/WeatherReport/obj/",
+      "projectPath": "/Users/anandraj/Projects/WeatherReport/WeatherReport/WeatherReport.Android.csproj",
+      "packagesPath": "/Users/anandraj/.nuget/packages/",
+      "outputPath": "/Users/anandraj/Projects/WeatherReport/WeatherReport/obj/",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
-        "/Users/anand/.config/NuGet/NuGet.Config"
+        "/Users/anandraj/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "monoandroid12.0"
@@ -6966,8 +6966,8 @@
       "frameworks": {
         "monoandroid12.0": {
           "projectReferences": {
-            "/Users/anand/Documents/WeatherReport/WeatherReportShared/WeatherReportShared.csproj": {
-              "projectPath": "/Users/anand/Documents/WeatherReport/WeatherReportShared/WeatherReportShared.csproj"
+            "/Users/anandraj/Projects/WeatherReport/WeatherReportShared/WeatherReportShared.csproj": {
+              "projectPath": "/Users/anandraj/Projects/WeatherReport/WeatherReportShared/WeatherReportShared.csproj"
             }
           }
         }

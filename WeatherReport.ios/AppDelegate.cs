@@ -1,5 +1,6 @@
 ﻿using System;
 using Foundation;
+using Google.Places;
 using Microsoft.Extensions.DependencyInjection;
 using UIKit;
 using WeatherReportShared.ViewModel;
@@ -27,6 +28,7 @@ namespace WeatherReport.ios
             var connnect = (Connectivity.NetworkAccess == NetworkAccess.Internet) || (Connectivity.NetworkAccess == NetworkAccess.Local);
             weatherViewModel.IsConnected = connnect;
             Connectivity.ConnectivityChanged += Connectivity_ConnectivityChanged;
+            PlacesClient.ProvideApiKey(WeatherReportShared.Utils.Constants.GooglePlace_API_KEY);
 
             // Override point for customization after application launch.
             // If not required for your application you can safely delete this method

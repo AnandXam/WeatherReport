@@ -155,7 +155,7 @@ namespace WeatherReport
             SearchPlaceTextview.Text = place.Name;
             ViewModel.getWeatherData();
         }
-        
+
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {
             Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
@@ -168,45 +168,45 @@ namespace WeatherReport
         /// </summary>
         public void requestLocationPermission()
         {
-          
-           Task.Run(async () => {
-               try
-               {
-                   var status = await Permissions.CheckStatusAsync<Permissions.LocationWhenInUse>();
-                   if (status == PermissionStatus.Granted)
-                   {
-                       ViewModel.Location = await Geolocation.GetLastKnownLocationAsync();
-                       if (ViewModel.Latitude == 0 && ViewModel.Longitude == 0)
-                       {
-                           ViewModel.Location = await Geolocation.GetLocationAsync(new GeolocationRequest
-                           {
-                               DesiredAccuracy = GeolocationAccuracy.Medium,
-                               Timeout = TimeSpan.FromSeconds(15)
-                           });
-                       }
-                   }
-                   else
-                   {
-                       status = await Permissions.RequestAsync<Permissions.LocationWhenInUse>();
-                       if (status == PermissionStatus.Granted)
-                       {
-                           ViewModel.Location = await Geolocation.GetLastKnownLocationAsync();
-                           if (ViewModel.Location == null)
-                           {
-                               ViewModel.Location = await Geolocation.GetLocationAsync(new GeolocationRequest
-                               {
-                                   DesiredAccuracy = GeolocationAccuracy.Medium,
-                                   Timeout = TimeSpan.FromSeconds(15)
-                               });
-                           }
-                       }
-                   }
-               }
-               catch (Exception)
-               {
 
-               }
-           });
+            Task.Run(async () => {
+                try
+                {
+                    var status = await Permissions.CheckStatusAsync<Permissions.LocationWhenInUse>();
+                    if (status == PermissionStatus.Granted)
+                    {
+                        ViewModel.Location = await Geolocation.GetLastKnownLocationAsync();
+                        if (ViewModel.Latitude == 0 && ViewModel.Longitude == 0)
+                        {
+                            ViewModel.Location = await Geolocation.GetLocationAsync(new GeolocationRequest
+                            {
+                                DesiredAccuracy = GeolocationAccuracy.Medium,
+                                Timeout = TimeSpan.FromSeconds(15)
+                            });
+                        }
+                    }
+                    else
+                    {
+                        status = await Permissions.RequestAsync<Permissions.LocationWhenInUse>();
+                        if (status == PermissionStatus.Granted)
+                        {
+                            ViewModel.Location = await Geolocation.GetLastKnownLocationAsync();
+                            if (ViewModel.Location == null)
+                            {
+                                ViewModel.Location = await Geolocation.GetLocationAsync(new GeolocationRequest
+                                {
+                                    DesiredAccuracy = GeolocationAccuracy.Medium,
+                                    Timeout = TimeSpan.FromSeconds(15)
+                                });
+                            }
+                        }
+                    }
+                }
+                catch (Exception)
+                {
+
+                }
+            });
         }
     }
 }

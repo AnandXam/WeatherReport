@@ -1,19 +1,20 @@
 {
   "version": 2,
-  "dgSpecHash": "FN5yDUduHvjve0n37iJEZXQUxskcKz5kSQw4AnESAd8RbndhkwLfxOQhjW2utSvmLHtExBcf8oTqg1b1WuZLUw==",
+  "dgSpecHash": "cMGkkNKTX5iZ69P9Mp7o+aEC6geM3guYza1iRomi4/p8ZT9Ol6h/cXGe1D4pj5hJOHy/HH2RIQoAcb6f4eJFsQ==",
   "success": true,
-  "projectFilePath": "/Users/anand/Documents/WeatherReport/WeatherReportShared/WeatherReportShared.csproj",
+  "projectFilePath": "/Users/anandraj/Projects/WeatherReport/WeatherReportShared/WeatherReportShared.csproj",
   "expectedPackageFiles": [
-    "/Users/anand/.nuget/packages/communitytoolkit.mvvm/8.0.0/communitytoolkit.mvvm.8.0.0.nupkg.sha512",
-    "/Users/anand/.nuget/packages/microsoft.extensions.dependencyinjection/7.0.0/microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
-    "/Users/anand/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/7.0.0/microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
-    "/Users/anand/.nuget/packages/newtonsoft.json/13.0.1/newtonsoft.json.13.0.1.nupkg.sha512",
-    "/Users/anand/.nuget/packages/system.componentmodel.annotations/5.0.0/system.componentmodel.annotations.5.0.0.nupkg.sha512",
-    "/Users/anand/.nuget/packages/system.numerics.vectors/4.5.0/system.numerics.vectors.4.5.0.nupkg.sha512",
-    "/Users/anand/.nuget/packages/system.runtime.compilerservices.unsafe/6.0.0/system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
-    "/Users/anand/.nuget/packages/xamarin.communitytoolkit/2.0.5/xamarin.communitytoolkit.2.0.5.nupkg.sha512",
-    "/Users/anand/.nuget/packages/xamarin.essentials/1.7.3/xamarin.essentials.1.7.3.nupkg.sha512",
-    "/Users/anand/.nuget/packages/xamarin.forms/5.0.0.2291/xamarin.forms.5.0.0.2291.nupkg.sha512"
+    "/Users/anandraj/.nuget/packages/communitytoolkit.mvvm/8.0.0/communitytoolkit.mvvm.8.0.0.nupkg.sha512",
+    "/Users/anandraj/.nuget/packages/microsoft.extensions.dependencyinjection/7.0.0/microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
+    "/Users/anandraj/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/7.0.0/microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
+    "/Users/anandraj/.nuget/packages/newtonsoft.json/13.0.1/newtonsoft.json.13.0.1.nupkg.sha512",
+    "/Users/anandraj/.nuget/packages/system.componentmodel.annotations/5.0.0/system.componentmodel.annotations.5.0.0.nupkg.sha512",
+    "/Users/anandraj/.nuget/packages/system.numerics.vectors/4.5.0/system.numerics.vectors.4.5.0.nupkg.sha512",
+    "/Users/anandraj/.nuget/packages/system.runtime.compilerservices.unsafe/6.0.0/system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
+    "/Users/anandraj/.nuget/packages/xamarin.communitytoolkit/2.0.5/xamarin.communitytoolkit.2.0.5.nupkg.sha512",
+    "/Users/anandraj/.nuget/packages/xamarin.essentials/1.7.3/xamarin.essentials.1.7.3.nupkg.sha512",
+    "/Users/anandraj/.nuget/packages/xamarin.forms/5.0.0.2291/xamarin.forms.5.0.0.2291.nupkg.sha512",
+    "/Users/anandraj/.nuget/packages/netstandard.library.ref/2.1.0/netstandard.library.ref.2.1.0.nupkg.sha512"
   ],
   "logs": []
 }

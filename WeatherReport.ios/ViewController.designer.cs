@@ -1,18 +1,74 @@
-﻿// WARNING
+// WARNING
 //
-// This file has been generated automatically by Visual Studio from the outlets and
-// actions declared in your storyboard file.
-// Manual changes to this file will not be maintained.
+// This file has been generated automatically by Visual Studio to store outlets and
+// actions made in the UI designer. If it is removed, they will be lost.
+// Manual changes to this file may not be handled correctly.
 //
 using Foundation;
-using System;
 using System.CodeDom.Compiler;
-using UIKit;
 
 namespace WeatherReport.ios
 {
-    [Register ("ViewController")]
-    partial class ViewController
-    {
-    }
+	[Register ("ViewController")]
+	partial class ViewController
+	{
+		[Outlet]
+		UIKit.UILabel DateLabel { get; set; }
+
+		[Outlet]
+		UIKit.UISwitch IsDefaultSwitch { get; set; }
+
+		[Outlet]
+		UIKit.UILabel LocationLabel { get; set; }
+
+		[Outlet]
+		UIKit.UITextField LocationSearchView { get; set; }
+
+		[Outlet]
+		UIKit.UILabel TempLabel { get; set; }
+
+		[Outlet]
+		UIKit.UILabel WeatherDesLabel { get; set; }
+
+		[Outlet]
+		UIKit.UIImageView WeatherImage { get; set; }
+		
+		void ReleaseDesignerOutlets ()
+		{
+			if (DateLabel != null) {
+				DateLabel.Dispose ();
+				DateLabel = null;
+			}
+
+			if (LocationLabel != null) {
+				LocationLabel.Dispose ();
+				LocationLabel = null;
+			}
+
+			if (TempLabel != null) {
+				TempLabel.Dispose ();
+				TempLabel = null;
+			}
+
+			if (WeatherDesLabel != null) {
+				WeatherDesLabel.Dispose ();
+				WeatherDesLabel = null;
+			}
+
+			if (WeatherImage != null) {
+				WeatherImage.Dispose ();
+				WeatherImage = null;
+			}
+
+			if (LocationSearchView != null) {
+				LocationSearchView.Dispose ();
+				LocationSearchView = null;
+			}
+
+			if (IsDefaultSwitch != null) {
+				IsDefaultSwitch.Dispose ();
+				IsDefaultSwitch = null;
+			}
+		}
+	}
 }

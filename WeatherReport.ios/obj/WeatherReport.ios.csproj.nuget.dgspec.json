@@ -1,21 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "/Users/anand/Documents/WeatherReport/WeatherReport.ios/WeatherReport.ios.csproj": {}
+    "/Users/anandraj/Projects/WeatherReport/WeatherReport.ios/WeatherReport.ios.csproj": {}
   },
   "projects": {
-    "/Users/anand/Documents/WeatherReport/WeatherReport.ios/WeatherReport.ios.csproj": {
+    "/Users/anandraj/Projects/WeatherReport/WeatherReport.ios/WeatherReport.ios.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/anand/Documents/WeatherReport/WeatherReport.ios/WeatherReport.ios.csproj",
+        "projectUniqueName": "/Users/anandraj/Projects/WeatherReport/WeatherReport.ios/WeatherReport.ios.csproj",
         "projectName": "WeatherReport.ios",
-        "projectPath": "/Users/anand/Documents/WeatherReport/WeatherReport.ios/WeatherReport.ios.csproj",
-        "packagesPath": "/Users/anand/.nuget/packages/",
-        "outputPath": "/Users/anand/Documents/WeatherReport/WeatherReport.ios/obj/",
+        "projectPath": "/Users/anandraj/Projects/WeatherReport/WeatherReport.ios/WeatherReport.ios.csproj",
+        "packagesPath": "/Users/anandraj/.nuget/packages/",
+        "outputPath": "/Users/anandraj/Projects/WeatherReport/WeatherReport.ios/obj/",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "configFilePaths": [
-          "/Users/anand/.config/NuGet/NuGet.Config"
+          "/Users/anandraj/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "xamarinios10"
@@ -26,8 +26,8 @@
         "frameworks": {
           "xamarinios10": {
             "projectReferences": {
-              "/Users/anand/Documents/WeatherReport/WeatherReportShared/WeatherReportShared.csproj": {
-                "projectPath": "/Users/anand/Documents/WeatherReport/WeatherReportShared/WeatherReportShared.csproj"
+              "/Users/anandraj/Projects/WeatherReport/WeatherReportShared/WeatherReportShared.csproj": {
+                "projectPath": "/Users/anandraj/Projects/WeatherReport/WeatherReportShared/WeatherReportShared.csproj"
               }
             }
           }
@@ -47,6 +47,10 @@
             "Xamarin.Essentials": {
               "target": "Package",
               "version": "[1.7.3, )"
+            },
+            "Xamarin.Google.iOS.Places": {
+              "target": "Package",
+              "version": "[6.0.0.1, )"
             }
           }
         }
@@ -63,17 +67,17 @@
         }
       }
     },
-    "/Users/anand/Documents/WeatherReport/WeatherReportShared/WeatherReportShared.csproj": {
+    "/Users/anandraj/Projects/WeatherReport/WeatherReportShared/WeatherReportShared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/anand/Documents/WeatherReport/WeatherReportShared/WeatherReportShared.csproj",
+        "projectUniqueName": "/Users/anandraj/Projects/WeatherReport/WeatherReportShared/WeatherReportShared.csproj",
         "projectName": "WeatherReportShared",
-        "projectPath": "/Users/anand/Documents/WeatherReport/WeatherReportShared/WeatherReportShared.csproj",
-        "packagesPath": "/Users/anand/.nuget/packages/",
-        "outputPath": "/Users/anand/Documents/WeatherReport/WeatherReportShared/obj/",
+        "projectPath": "/Users/anandraj/Projects/WeatherReport/WeatherReportShared/WeatherReportShared.csproj",
+        "packagesPath": "/Users/anandraj/.nuget/packages/",
+        "outputPath": "/Users/anandraj/Projects/WeatherReport/WeatherReportShared/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/anand/.config/NuGet/NuGet.Config"
+          "/Users/anandraj/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.1"
@@ -128,12 +132,18 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "NETStandard.Library.Ref",
+              "version": "[2.1.0, 2.1.0]"
+            }
+          ],
           "frameworkReferences": {
             "NETStandard.Library": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.425/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/Users/anandraj/Library/Caches/VisualStudio/17.0/MSBuild/1763_3/RuntimeIdentifierGraph.json"
         }
       }
     }
