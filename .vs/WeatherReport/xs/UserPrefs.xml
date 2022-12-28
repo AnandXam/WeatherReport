@@ -1,34 +1,47 @@
-﻿<Properties StartupConfiguration="{E9824600-EB74-44D2-BA9F-FD814308F13C}|Default" GitUserInfo="UsingGIT">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+﻿<Properties GitUserInfo="UsingGIT" StartupConfiguration="{E9824600-EB74-44D2-BA9F-FD814308F13C}|Default">
+  <MonoDevelop.Ide.ItemProperties.WeatherReport.Android AndroidDesignerPreferredDevice="Nexus 4" AndroidDesignerPreferredTheme="AppTheme" PreferredExecutionTarget="Android.pixel_5_-_api_33" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.ItemProperties.WeatherReport.ios PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget." />
   <MonoDevelop.MonoDroid LastDeploySdkVersion="13.1.0.1" />
-  <MonoDevelop.Ide.ItemProperties.WeatherReport.Android AndroidDesignerPreferredTheme="AppTheme" AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.pixel_5_-_api_33" />
+  <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.pixel_5_-_api_33" />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workbench ActiveDocument="WeatherReport.ios/AppDelegate.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="WeatherReport/Activities/SunRiseActivity.cs">
     <Files>
-      <File FileName="WeatherReport.ios/ViewController.cs" />
-      <File FileName="WeatherReportShared/ViewModel/WeatherViewModel.cs" />
-      <File FileName="WeatherReport.ios/Info.plist" />
-      <File FileName="WeatherReport.ios/AppDelegate.cs" Line="1" Column="1" />
+      <File FileName="WeatherReport/Activities/SunRiseActivity.cs" Line="24" Column="66" />
+      <File FileName="WeatherReport/Resources/values/styles.xml" Line="26" Column="63" />
+      <File FileName="WeatherReportShared/ViewModel/SuriseViewModel.cs" Line="23" Column="1" />
+      <File FileName="WeatherReport/Activities/MainActivity.cs" Line="29" Column="24" />
+      <File FileName="WeatherReport/Resources/values/colors.xml" Line="6" Column="37" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="WeatherReport" expanded="True">
             <Node name="WeatherReport.Android" expanded="True">
-              <Node name="Activities" expanded="True" />
+              <Node name="Activities" expanded="True">
+                <Node name="SunRiseActivity.cs" selected="True" />
+              </Node>
+              <Node name="Properties" expanded="True" />
+              <Node name="Resources" expanded="True">
+                <Node name="layout" expanded="True" />
+                <Node name="values" expanded="True" />
+              </Node>
             </Node>
-            <Node name="WeatherReport.ios" expanded="True">
-              <Node name="AppDelegate.cs" selected="True" />
+            <Node name="WeatherReport.ios" expanded="True" />
+            <Node name="WeatherReportShared" expanded="True">
+              <Node name="Helpers" expanded="True" />
+              <Node name="Interfaces" expanded="True" />
+              <Node name="Model" expanded="True" />
+              <Node name="Utils" expanded="True" />
+              <Node name="ViewModel" expanded="True" />
             </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.pixel_5_-_api_33" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.WeatherReport.ios PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget." />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>

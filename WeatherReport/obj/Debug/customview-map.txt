@@ -27,6 +27,7 @@ color;obj/Debug/res/drawable/splash_screen.xml
 color;obj/Debug/res/values/colors.xml
 color;obj/Debug/res/values/ic_launcher_background.xml
 com.airbnb.lottie.LottieAnimationView;obj/Debug/res/layout/activity_main.xml
+com.airbnb.lottie.LottieAnimationView;obj/Debug/res/layout/activity_sunrise.xml
 com.google.android.libraries.places.widget.internal.ui.AutocompleteImplFragment;/Users/anandraj/Projects/WeatherReport/WeatherReport/obj/Debug/lp/82/jl/res/layout/places_autocomplete_activity.xml
 com.google.android.material.appbar.AppBarLayout;/Users/anandraj/Projects/WeatherReport/WeatherReport/obj/Debug/lp/73/jl/res/layout/flyoutcontent.xml
 com.google.android.material.appbar.AppBarLayout;/Users/anandraj/Projects/WeatherReport/WeatherReport/obj/Debug/lp/73/jl/res/layout/rootlayout.xml
@@ -35,6 +36,9 @@ com.google.android.material.bottomnavigation.BottomNavigationView;/Users/anandra
 com.google.android.material.tabs.TabLayout;/Users/anandraj/Projects/WeatherReport/WeatherReport/obj/Debug/lp/73/jl/res/layout/fallbacktabbardonotuse.xml
 com.google.android.material.tabs.TabLayout;/Users/anandraj/Projects/WeatherReport/WeatherReport/obj/Debug/lp/73/jl/res/layout/rootlayout.xml
 com.google.android.material.tabs.TabLayout;/Users/anandraj/Projects/WeatherReport/WeatherReport/obj/Debug/lp/73/jl/res/layout/tabbar.xml
+crc642e1c7a98bdb5c44a.AutoFitTextureView;/Users/anandraj/Projects/WeatherReport/WeatherReport/obj/Debug/lp/69/jl/res/layout/camerafragment.xml
+crc643f46942d9dd1fff9.ShellFlyoutLayout;/Users/anandraj/Projects/WeatherReport/WeatherReport/obj/Debug/lp/73/jl/res/layout/flyoutcontent.xml
+crc64720bb2db43a66fe9.FormsViewPager;/Users/anandraj/Projects/WeatherReport/WeatherReport/obj/Debug/lp/73/jl/res/layout/rootlayout.xml
 declare-styleable;/Users/anandraj/Projects/WeatherReport/WeatherReport/obj/Debug/lp/2/jl/res/values/values.xml
 declare-styleable;/Users/anandraj/Projects/WeatherReport/WeatherReport/obj/Debug/lp/73/jl/res/values/attrs.xml
 dimen;/Users/anandraj/Projects/WeatherReport/WeatherReport/obj/Debug/lp/82/jl/res/values/values.xml
@@ -152,6 +156,7 @@ LinearLayout;/Users/anandraj/Projects/WeatherReport/WeatherReport/obj/Debug/lp/8
 LinearLayout;/Users/anandraj/Projects/WeatherReport/WeatherReport/obj/Debug/lp/82/jl/res/layout/places_autocomplete_impl_fragment_overlay.xml
 LinearLayout;/Users/anandraj/Projects/WeatherReport/WeatherReport/obj/Debug/lp/82/jl/res/layout/places_autocomplete_prediction.xml
 LinearLayout;obj/Debug/res/layout/activity_main.xml
+LinearLayout;obj/Debug/res/layout/activity_sunrise.xml
 merge;/Users/anandraj/Projects/WeatherReport/WeatherReport/obj/Debug/lp/82/jl/res/layout/places_autocomplete_impl_error.xml
 merge;/Users/anandraj/Projects/WeatherReport/WeatherReport/obj/Debug/lp/82/jl/res/layout/places_autocomplete_impl_powered_by_google.xml
 merge;/Users/anandraj/Projects/WeatherReport/WeatherReport/obj/Debug/lp/82/jl/res/layout/places_autocomplete_impl_search_bar.xml
@@ -160,6 +165,7 @@ paths;/Users/anandraj/Projects/WeatherReport/WeatherReport/obj/Debug/lp/70/jl/re
 ProgressBar;/Users/anandraj/Projects/WeatherReport/WeatherReport/obj/Debug/lp/82/jl/res/layout/places_autocomplete_impl_error.xml
 ProgressBar;/Users/anandraj/Projects/WeatherReport/WeatherReport/obj/Debug/lp/82/jl/res/layout/places_autocomplete_impl_powered_by_google.xml
 RelativeLayout;obj/Debug/res/layout/activity_main.xml
+RelativeLayout;obj/Debug/res/layout/activity_sunrise.xml
 resources;/Users/anandraj/Projects/WeatherReport/WeatherReport/obj/Debug/lp/2/jl/res/values/values.xml
 resources;/Users/anandraj/Projects/WeatherReport/WeatherReport/obj/Debug/lp/73/jl/res/values/attrs.xml
 resources;/Users/anandraj/Projects/WeatherReport/WeatherReport/obj/Debug/lp/73/jl/res/values/strings.xml
@@ -343,6 +349,7 @@ style;obj/Debug/res/values/styles.xml
 TextView;/Users/anandraj/Projects/WeatherReport/WeatherReport/obj/Debug/lp/82/jl/res/layout/places_autocomplete_impl_error.xml
 TextView;/Users/anandraj/Projects/WeatherReport/WeatherReport/obj/Debug/lp/82/jl/res/layout/places_autocomplete_prediction.xml
 TextView;obj/Debug/res/layout/activity_main.xml
+TextView;obj/Debug/res/layout/activity_sunrise.xml
 translate;/Users/anandraj/Projects/WeatherReport/WeatherReport/obj/Debug/lp/73/jl/res/anim/enterfromleft.xml
 translate;/Users/anandraj/Projects/WeatherReport/WeatherReport/obj/Debug/lp/73/jl/res/anim/enterfromright.xml
 translate;/Users/anandraj/Projects/WeatherReport/WeatherReport/obj/Debug/lp/73/jl/res/anim/exittoleft.xml

@@ -22,7 +22,7 @@
   <permission android:name="com.companyname.weatherreport.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" android:protectionLevel="signature" />
   <uses-permission android:name="com.companyname.weatherreport.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
   <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-  <application android:name="android.app.Application" android:allowBackup="true" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:debuggable="true" android:extractNativeLibs="true" android:icon="@mipmap/ic_launcher" android:label="@string/app_name" android:roundIcon="@mipmap/ic_launcher_round" android:supportsRtl="true" android:theme="@style/AppTheme">
+  <application android:name="android.app.Application" android:allowBackup="true" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:debuggable="true" android:extractNativeLibs="true" android:icon="@mipmap/ic_launcher" android:label="@string/app_name" android:supportsRtl="true" android:theme="@style/AppTheme">
     <uses-library android:name="org.apache.http.legacy" android:required="false" />
     <activity android:name="crc644b5070279c0398c7.MainActivity" android:label="@string/app_name" android:theme="@style/AppTheme" />
     <activity android:name="crc64ad1771ca07530b45.SplashActivity" android:exported="true" android:noHistory="true" android:theme="@style/MyTheme.Splash">
@@ -31,6 +31,7 @@
         <category android:name="android.intent.category.LAUNCHER" />
       </intent-filter>
     </activity>
+    <activity android:name="crc64ad1771ca07530b45.SunRiseActivity" android:label="SunRiseActivity" android:theme="@style/AppTheme" />
     <service android:name="crc64396a3fe5f8138e3f.KeepAliveService" />
     <receiver android:name="crc64a0e0a82d0db9a07d.BatteryBroadcastReceiver" android:enabled="true" android:exported="false" android:label="Essentials Battery Broadcast Receiver" />
     <receiver android:name="crc64a0e0a82d0db9a07d.EnergySaverBroadcastReceiver" android:enabled="true" android:exported="false" android:label="Essentials Energy Saver Broadcast Receiver" />
