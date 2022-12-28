@@ -24,7 +24,8 @@ namespace WeatherReportShared.Helpers
         public static IServiceCollection ConfigureViewModels(this IServiceCollection services)
         {
             services.AddTransient<BaseViewModel>().
-                AddTransient<WeatherViewModel>();
+                AddTransient<WeatherViewModel>().
+                AddTransient<SuriseViewModel>();
 
             return services;
         }

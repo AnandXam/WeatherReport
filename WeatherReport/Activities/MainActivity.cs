@@ -19,6 +19,7 @@ using Google.Places;
 using Microsoft.Extensions.DependencyInjection;
 using Newtonsoft.Json;
 using Square.Picasso;
+using WeatherReport.Activities;
 using WeatherReportShared.Model;
 using WeatherReportShared.ViewModel;
 using Xamarin.Essentials;
@@ -32,7 +33,7 @@ namespace WeatherReport
     {
         public static IServiceProvider Service { get; set; }
         private LottieAnimationView Windanimation, Humidanimation, Feelanimation;
-        TextView DateText, TempText, Cityext, SearchPlaceTextview, WeatherDescp, WindText, Humidityext, HowItFeelText;
+        TextView DateText, TempText, Cityext, SearchPlaceTextview, WeatherDescp, WindText, Humidityext, HowItFeelText, ViewSunriseLabel;
         ImageView WeatherImage;
         CheckBox MakeDefaultCheckBox;
         CardView SearchPlaceCardview;
@@ -50,6 +51,7 @@ namespace WeatherReport
             this.Windanimation = FindViewById<LottieAnimationView>(Resource.Id.Windanimation);
             this.Humidanimation = FindViewById<LottieAnimationView>(Resource.Id.Humidanimation);
             this.Feelanimation = FindViewById<LottieAnimationView>(Resource.Id.Feelanimation);
+            this.ViewSunriseLabel = FindViewById<TextView>(Resource.Id.ViewSunriseLabel);        
             this.Windanimation.PlayAnimation();
             this.Humidanimation.PlayAnimation();
             this.Feelanimation.PlayAnimation();
@@ -73,7 +75,15 @@ namespace WeatherReport
                     ViewModel.IsLocationDefaulted = e.IsChecked;
                 }
             };
+            BindResources();
+            ViewModel.Setup();
+            ViewModel.PropertyChanged += ViewModel_PropertyChanged;
+            ViewSunriseLabel.Click += NavigateToSunriseScreen;
+        }
 
+
+        private void BindResources()
+        {
             this.Cityext = this.FindViewById<TextView>(Resource.Id.Cityext);
             this.DateText = this.FindViewById<TextView>(Resource.Id.DateText);
             this.TempText = this.FindViewById<TextView>(Resource.Id.TempText);
@@ -98,10 +108,8 @@ namespace WeatherReport
                .NoFade()
                .Into(this.WeatherImage);
             }
-
-            ViewModel.Setup();
-            ViewModel.PropertyChanged += ViewModel_PropertyChanged;
         }
+
 
         void ViewModel_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
         {
@@ -207,6 +215,11 @@ namespace WeatherReport
 
                 }
             });
+        }
+        void NavigateToSunriseScreen(object sender, EventArgs e)
+        {
+            Intent navigate = new Intent(this, typeof(SunRiseActivity));
+            StartActivity(navigate);
         }
     }
 }

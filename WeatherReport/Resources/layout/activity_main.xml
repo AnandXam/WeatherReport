@@ -14,7 +14,7 @@
             android:gravity="center_horizontal"
             android:text="@string/app_title"
             android:layout_margin="30px"
-            android:textSize="40px"
+            android:textSize="80px"
             android:fontFamily="@font/mb"  
             android:textColor="@android:color/white"          
             android:layout_height="wrap_content"/>
@@ -307,6 +307,22 @@
                  android:textColor="@android:color/white"          
                  android:layout_height="wrap_content"/>
     </LinearLayout>
-    </LinearLayout>         
+    </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+              <TextView
+                 android:layout_width="match_parent"
+                 android:gravity="center"
+                 android:text="View Sunrise details →"
+                 android:layout_marginTop="60px"
+                 android:layout_alignParentLeft="true"
+                 android:textSize="40px"
+                 android:id="@+id/ViewSunriseLabel"            
+                 android:fontFamily="@font/ml"
+                 android:textColor="@android:color/white"          
+                 android:layout_height="wrap_content"/>
+        </LinearLayout>
     </LinearLayout>
 </RelativeLayout>

@@ -59,7 +59,7 @@ namespace WeatherReportShared.ViewModel
             get => geoloc;
             set => SetProperty(ref geoloc, value);
         }
-        public OneCallAPI? WeatherData { get; set; }
+        public static OneCallAPI? WeatherData { get; set; }
 
         bool showData;
         public bool ShowData
