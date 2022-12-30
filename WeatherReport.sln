@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherReport.ios", "Weathe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherReportShared", "WeatherReportShared\WeatherReportShared.csproj", "{459D99BD-5FBC-4228-9C23-90E0A9B7C1C0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherReport.Test", "WeatherReport.Test\WeatherReport.Test.csproj", "{20E17C9B-3F10-44E1-BF0A-196A68B51A58}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,6 +57,18 @@ Global
 		{459D99BD-5FBC-4228-9C23-90E0A9B7C1C0}.Debug|iPhone.Build.0 = Debug|Any CPU
 		{459D99BD-5FBC-4228-9C23-90E0A9B7C1C0}.Release|iPhone.ActiveCfg = Release|Any CPU
 		{459D99BD-5FBC-4228-9C23-90E0A9B7C1C0}.Release|iPhone.Build.0 = Release|Any CPU
+		{20E17C9B-3F10-44E1-BF0A-196A68B51A58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20E17C9B-3F10-44E1-BF0A-196A68B51A58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20E17C9B-3F10-44E1-BF0A-196A68B51A58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20E17C9B-3F10-44E1-BF0A-196A68B51A58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20E17C9B-3F10-44E1-BF0A-196A68B51A58}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{20E17C9B-3F10-44E1-BF0A-196A68B51A58}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{20E17C9B-3F10-44E1-BF0A-196A68B51A58}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{20E17C9B-3F10-44E1-BF0A-196A68B51A58}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{20E17C9B-3F10-44E1-BF0A-196A68B51A58}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{20E17C9B-3F10-44E1-BF0A-196A68B51A58}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{20E17C9B-3F10-44E1-BF0A-196A68B51A58}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{20E17C9B-3F10-44E1-BF0A-196A68B51A58}.Release|iPhone.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

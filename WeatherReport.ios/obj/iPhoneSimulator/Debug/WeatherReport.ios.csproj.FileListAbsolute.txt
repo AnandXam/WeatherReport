@@ -72,6 +72,7 @@
 /Users/anandraj/Projects/WeatherReport/WeatherReport.ios/obj/iPhoneSimulator/Debug/optimized/ic_wind.png
 /Users/anandraj/Projects/WeatherReport/WeatherReport.ios/obj/iPhoneSimulator/Debug/optimized/ic_sunrise.png
 /Users/anandraj/Projects/WeatherReport/WeatherReport.ios/obj/iPhoneSimulator/Debug/optimized/ic_sunset.png
+/Users/anandraj/Projects/WeatherReport/WeatherReport.ios/obj/iPhoneSimulator/Debug/optimized/splash_logo.png
 /Users/anandraj/Projects/WeatherReport/WeatherReport.ios/obj/iPhoneSimulator/Debug/optimized/GoogleMaps.bundle/Info.plist
 /Users/anandraj/Projects/WeatherReport/WeatherReport.ios/obj/iPhoneSimulator/Debug/optimized/GoogleMaps.bundle/GMSCacheStorage.momd/VersionInfo.plist
 /Users/anandraj/Projects/WeatherReport/WeatherReport.ios/obj/iPhoneSimulator/Debug/optimized/GoogleMaps.bundle/GMSCoreResources.bundle/Info.plist
@@ -179,4 +180,3 @@
 /Users/anandraj/Projects/WeatherReport/WeatherReport.ios/obj/iPhoneSimulator/Debug/WeatherReport.ios.csproj.CopyComplete
 /Users/anandraj/Projects/WeatherReport/WeatherReport.ios/obj/iPhoneSimulator/Debug/WeatherReport.ios.exe
 /Users/anandraj/Projects/WeatherReport/WeatherReport.ios/obj/iPhoneSimulator/Debug/WeatherReport.ios.pdb
-/Users/anandraj/Projects/WeatherReport/WeatherReport.ios/obj/iPhoneSimulator/Debug/optimized/splash_logo.png

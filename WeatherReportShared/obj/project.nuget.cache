@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "jr2uBePGwwOB9TZVKVMuU1+8Y8lndPnBrA4b2JDQvtSqdd7CYPGA6hwM6duwdVQ+KU2o+mUk0toHLq8kqFZTXQ==",
+  "dgSpecHash": "K0h0sj9R4vR4WgsWbyKUgo2mp/HcAGBfL32XLzjIdgdowYbxBFKEVZ45dR/wpsFEdU8m9KbKyXqd+uX6q8JoMA==",
   "success": true,
   "projectFilePath": "/Users/anandraj/Projects/WeatherReport/WeatherReportShared/WeatherReportShared.csproj",
   "expectedPackageFiles": [
@@ -13,8 +13,7 @@
     "/Users/anandraj/.nuget/packages/system.runtime.compilerservices.unsafe/6.0.0/system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
     "/Users/anandraj/.nuget/packages/xamarin.communitytoolkit/2.0.5/xamarin.communitytoolkit.2.0.5.nupkg.sha512",
     "/Users/anandraj/.nuget/packages/xamarin.essentials/1.7.3/xamarin.essentials.1.7.3.nupkg.sha512",
-    "/Users/anandraj/.nuget/packages/xamarin.forms/5.0.0.2291/xamarin.forms.5.0.0.2291.nupkg.sha512",
-    "/Users/anandraj/.nuget/packages/netstandard.library.ref/2.1.0/netstandard.library.ref.2.1.0.nupkg.sha512"
+    "/Users/anandraj/.nuget/packages/xamarin.forms/5.0.0.2291/xamarin.forms.5.0.0.2291.nupkg.sha512"
   ],
   "logs": []
 }
