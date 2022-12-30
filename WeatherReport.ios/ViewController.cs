@@ -21,7 +21,6 @@ namespace WeatherReport.ios
         {
 
         }
-
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
@@ -29,22 +28,30 @@ namespace WeatherReport.ios
             ViewModel = AppDelegate.Service.GetService<WeatherViewModel>();
             GetLocation();
             ViewModel.Setup();
+            BindResources();
+            UITapGestureRecognizer tapGesture = new UITapGestureRecognizer(Tap);
+            tapGesture.NumberOfTapsRequired = 1;
+            LocationSearchView.AddGestureRecognizer(tapGesture);
+        }
+
+        private void BindResources()
+        {
+            IsDefaultSwitch.On = ViewModel.IsLocationDefaulted;
             DateLabel.Text = ViewModel.Data;
             TempLabel.Text = ViewModel.Temperature;
             WeatherDesLabel.Text = ViewModel.WeatherDescp;
             LocationLabel.Text = ViewModel.PlaceName;
+            WindLabel.Text = ViewModel.Wind;
+            HumidityLabel.Text = ViewModel.Humidity;
+            FeelsLikeLabel.Text = ViewModel.FeelsLike;
             ViewModel.PropertyChanged += ViewModel_PropertyChanged;
             IsDefaultSwitch.ValueChanged += (o, e) =>
             {
                 if (IsDefaultSwitch.On)
                 {
                     ViewModel.IsLocationDefaulted = ((UISwitch)o).On;
-
                 }
             };
-            UITapGestureRecognizer tapGesture = new UITapGestureRecognizer(Tap);
-            tapGesture.NumberOfTapsRequired = 1;
-            LocationSearchView.AddGestureRecognizer(tapGesture);
         }
 
         void Tap(UITapGestureRecognizer tap1)
@@ -59,6 +66,9 @@ namespace WeatherReport.ios
             TempLabel.Text = ViewModel.Temperature;
             WeatherDesLabel.Text = ViewModel.WeatherDescp;
             LocationLabel.Text = ViewModel.PlaceName;
+            WindLabel.Text = ViewModel.Wind;
+            HumidityLabel.Text = ViewModel.Humidity;
+            FeelsLikeLabel.Text = ViewModel.FeelsLike;
             if (!string.IsNullOrEmpty(ViewModel.WeatherImageURL))
             { WeatherImage.Image = FromUrl(ViewModel.WeatherImageURL); }              
         }
@@ -130,9 +140,9 @@ namespace WeatherReport.ios
             // Handle the user's selection.
             DismissViewController(true, null);
             LocationSearchView.Text = place.Name;
-            Console.WriteLine($"Place name: {place.Name}");
             ViewModel.Latitude = place.Coordinate.Latitude;
             ViewModel.Longitude = place.Coordinate.Longitude;
+            ViewModel.getWeatherData();
         }
 
         public void DidFailAutocomplete(AutocompleteViewController viewController, NSError error)

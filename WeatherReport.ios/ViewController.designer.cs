@@ -16,6 +16,12 @@ namespace WeatherReport.ios
 		UIKit.UILabel DateLabel { get; set; }
 
 		[Outlet]
+		UIKit.UILabel FeelsLikeLabel { get; set; }
+
+		[Outlet]
+		UIKit.UILabel HumidityLabel { get; set; }
+
+		[Outlet]
 		UIKit.UISwitch IsDefaultSwitch { get; set; }
 
 		[Outlet]
@@ -32,6 +38,9 @@ namespace WeatherReport.ios
 
 		[Outlet]
 		UIKit.UIImageView WeatherImage { get; set; }
+
+		[Outlet]
+		UIKit.UILabel WindLabel { get; set; }
 		
 		void ReleaseDesignerOutlets ()
 		{
@@ -40,9 +49,24 @@ namespace WeatherReport.ios
 				DateLabel = null;
 			}
 
+			if (HumidityLabel != null) {
+				HumidityLabel.Dispose ();
+				HumidityLabel = null;
+			}
+
+			if (IsDefaultSwitch != null) {
+				IsDefaultSwitch.Dispose ();
+				IsDefaultSwitch = null;
+			}
+
 			if (LocationLabel != null) {
 				LocationLabel.Dispose ();
 				LocationLabel = null;
+			}
+
+			if (LocationSearchView != null) {
+				LocationSearchView.Dispose ();
+				LocationSearchView = null;
 			}
 
 			if (TempLabel != null) {
@@ -60,14 +84,14 @@ namespace WeatherReport.ios
 				WeatherImage = null;
 			}
 
-			if (LocationSearchView != null) {
-				LocationSearchView.Dispose ();
-				LocationSearchView = null;
+			if (WindLabel != null) {
+				WindLabel.Dispose ();
+				WindLabel = null;
 			}
 
-			if (IsDefaultSwitch != null) {
-				IsDefaultSwitch.Dispose ();
-				IsDefaultSwitch = null;
+			if (FeelsLikeLabel != null) {
+				FeelsLikeLabel.Dispose ();
+				FeelsLikeLabel = null;
 			}
 		}
 	}

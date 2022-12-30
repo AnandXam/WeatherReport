@@ -83,45 +83,16 @@
         <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">
             <Visible>false</Visible>
         </ImageAsset>
-        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon1024.png">
-            <Visible>false</Visible>
-        </ImageAsset>
-        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon167.png">
-            <Visible>false</Visible>
-        </ImageAsset>
-        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon120.png">
-            <Visible>false</Visible>
-        </ImageAsset>
-        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon152.png">
-            <Visible>false</Visible>
-        </ImageAsset>
-        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon180.png">
-            <Visible>false</Visible>
-        </ImageAsset>
-        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon29.png">
-            <Visible>false</Visible>
-        </ImageAsset>
-        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon40.png">
-            <Visible>false</Visible>
-        </ImageAsset>
-        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon58.png">
-            <Visible>false</Visible>
-        </ImageAsset>
-        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon76.png">
-            <Visible>false</Visible>
-        </ImageAsset>
-        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon80.png">
-            <Visible>false</Visible>
-        </ImageAsset>
-        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon87.png">
-            <Visible>false</Visible>
-        </ImageAsset>
-        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon20.png">
-            <Visible>false</Visible>
-        </ImageAsset>
-        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon60.png">
-            <Visible>false</Visible>
-        </ImageAsset>
+        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\1024.png" />
+        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\60.png" />
+        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\120 1.png" />
+        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\58.png" />
+        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\167.png" />
+        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\120.png" />
+        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\180.png" />
+        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\87 1.png" />
+        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\40.png" />
+        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\87.png" />
     </ItemGroup>
     <ItemGroup>
         <Folder Include="Resources\" />
@@ -160,6 +131,12 @@
     </ItemGroup>
     <ItemGroup>
       <BundleResource Include="Resources\ic_location.png" />
+      <BundleResource Include="Resources\ic_feelslike.png" />
+      <BundleResource Include="Resources\ic_humidity.png" />
+      <BundleResource Include="Resources\ic_wind.png" />
+      <BundleResource Include="Resources\ic_sunrise.png" />
+      <BundleResource Include="Resources\ic_sunset.png" />
+      <BundleResource Include="Resources\splash_logo.png" />
     </ItemGroup>
     <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <_PostProcessingItem Include="WeatherReport.ios.app/WeatherReport.ios">
+      <BCSymbolMapName>WeatherReport.ios.bcsymbolmap</BCSymbolMapName>
+      <NoDSymUtil>true</NoDSymUtil>
+      <dSYMSourcePathExists>false</dSYMSourcePathExists>
+      <NoSymbolStrip>true</NoSymbolStrip>
+      <dSYMInfoPlistRelativePath>WeatherReport.ios.app.dSYM\Contents\Info.plist</dSYMInfoPlistRelativePath>
+      <SymbolFile>/Users/anandraj/Projects/WeatherReport/WeatherReport.ios/obj/iPhoneSimulator/Debug/mtouch-symbols.list</SymbolFile>
+      <DSymName>WeatherReport.ios.app.dSYM</DSymName>
+      <SourceProjectPath>/Users/anandraj/Projects/WeatherReport/WeatherReport.ios</SourceProjectPath>
+    </_PostProcessingItem>
+  </ItemGroup>
+</Project>

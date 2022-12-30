@@ -1,7 +1,5 @@
 @string/appbar_scrolling_view_behavior;/Users/anandraj/Projects/WeatherReport/WeatherReport/obj/Debug/lp/73/jl/res/layout/rootlayout.xml
 {urn:oasis:names:tc:xliff:document:1.2}g;/Users/anandraj/Projects/WeatherReport/WeatherReport/obj/Debug/lp/82/jl/res/values/values.xml
-adaptive-icon;obj/Debug/res/mipmap-anydpi-v26/ic_launcher.xml
-adaptive-icon;obj/Debug/res/mipmap-anydpi-v26/ic_launcher_round.xml
 alpha;/Users/anandraj/Projects/WeatherReport/WeatherReport/obj/Debug/lp/73/jl/res/anim/enterfromleft.xml
 alpha;/Users/anandraj/Projects/WeatherReport/WeatherReport/obj/Debug/lp/73/jl/res/anim/exittoleft.xml
 androidx.appcompat.widget.Toolbar;/Users/anandraj/Projects/WeatherReport/WeatherReport/obj/Debug/lp/73/jl/res/layout/fallbacktoolbardonotuse.xml
@@ -16,8 +14,6 @@ androidx.recyclerview.widget.RecyclerView;/Users/anandraj/Projects/WeatherReport
 androidx.recyclerview.widget.RecyclerView;/Users/anandraj/Projects/WeatherReport/WeatherReport/obj/Debug/lp/82/jl/res/layout/places_autocomplete_impl_fragment_overlay.xml
 attr;/Users/anandraj/Projects/WeatherReport/WeatherReport/obj/Debug/lp/2/jl/res/values/values.xml
 attr;/Users/anandraj/Projects/WeatherReport/WeatherReport/obj/Debug/lp/73/jl/res/values/attrs.xml
-background;obj/Debug/res/mipmap-anydpi-v26/ic_launcher.xml
-background;obj/Debug/res/mipmap-anydpi-v26/ic_launcher_round.xml
 bitmap;obj/Debug/res/drawable/splash_screen.xml
 Button;/Users/anandraj/Projects/WeatherReport/WeatherReport/obj/Debug/lp/82/jl/res/layout/places_autocomplete_impl_error.xml
 cache-path;/Users/anandraj/Projects/WeatherReport/WeatherReport/obj/Debug/lp/70/jl/res/xml/xamarin_essentials_fileprovider_file_paths.xml
@@ -36,9 +32,6 @@ com.google.android.material.bottomnavigation.BottomNavigationView;/Users/anandra
 com.google.android.material.tabs.TabLayout;/Users/anandraj/Projects/WeatherReport/WeatherReport/obj/Debug/lp/73/jl/res/layout/fallbacktabbardonotuse.xml
 com.google.android.material.tabs.TabLayout;/Users/anandraj/Projects/WeatherReport/WeatherReport/obj/Debug/lp/73/jl/res/layout/rootlayout.xml
 com.google.android.material.tabs.TabLayout;/Users/anandraj/Projects/WeatherReport/WeatherReport/obj/Debug/lp/73/jl/res/layout/tabbar.xml
-crc642e1c7a98bdb5c44a.AutoFitTextureView;/Users/anandraj/Projects/WeatherReport/WeatherReport/obj/Debug/lp/69/jl/res/layout/camerafragment.xml
-crc643f46942d9dd1fff9.ShellFlyoutLayout;/Users/anandraj/Projects/WeatherReport/WeatherReport/obj/Debug/lp/73/jl/res/layout/flyoutcontent.xml
-crc64720bb2db43a66fe9.FormsViewPager;/Users/anandraj/Projects/WeatherReport/WeatherReport/obj/Debug/lp/73/jl/res/layout/rootlayout.xml
 declare-styleable;/Users/anandraj/Projects/WeatherReport/WeatherReport/obj/Debug/lp/2/jl/res/values/values.xml
 declare-styleable;/Users/anandraj/Projects/WeatherReport/WeatherReport/obj/Debug/lp/73/jl/res/values/attrs.xml
 dimen;/Users/anandraj/Projects/WeatherReport/WeatherReport/obj/Debug/lp/82/jl/res/values/values.xml
@@ -128,8 +121,6 @@ EditText;/Users/anandraj/Projects/WeatherReport/WeatherReport/obj/Debug/lp/82/jl
 enum;/Users/anandraj/Projects/WeatherReport/WeatherReport/obj/Debug/lp/2/jl/res/values/values.xml
 external-cache-path;/Users/anandraj/Projects/WeatherReport/WeatherReport/obj/Debug/lp/70/jl/res/xml/xamarin_essentials_fileprovider_file_paths.xml
 external-path;/Users/anandraj/Projects/WeatherReport/WeatherReport/obj/Debug/lp/70/jl/res/xml/xamarin_essentials_fileprovider_file_paths.xml
-foreground;obj/Debug/res/mipmap-anydpi-v26/ic_launcher.xml
-foreground;obj/Debug/res/mipmap-anydpi-v26/ic_launcher_round.xml
 fragment;/Users/anandraj/Projects/WeatherReport/WeatherReport/obj/Debug/lp/82/jl/res/layout/places_autocomplete_activity.xml
 FrameLayout;/Users/anandraj/Projects/WeatherReport/WeatherReport/obj/Debug/lp/69/jl/res/layout/camerafragment.xml
 FrameLayout;/Users/anandraj/Projects/WeatherReport/WeatherReport/obj/Debug/lp/73/jl/res/layout/bottomtablayout.xml

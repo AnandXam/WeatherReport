@@ -21,6 +21,7 @@ namespace WeatherReportShared.ViewModel
             {
                 Latitude = lastUsedLatitude;
                 Longitude = lastUsedLongitude;
+                IsLocationDefaulted = true;
             }
             getWeatherData();
         }
@@ -35,7 +36,7 @@ namespace WeatherReportShared.ViewModel
             }
         }
 
-        Location? location;
+        Location? location; 
         public Location Location
         {
             get => location;
