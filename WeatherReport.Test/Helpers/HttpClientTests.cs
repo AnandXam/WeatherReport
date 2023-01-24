@@ -7,52 +7,53 @@ using WeatherReportShared.Helpers;
 namespace WeatherReport.Test.Helpers
 {
 
-        [TestFixture]
-        public class HttpClientTests
+    [TestFixture]
+    public class HttpClientTests
+    {   
+        [Test]
+        [TestCase(1, false)]
+        [TestCase(1, true)]
+        [TestCase(1, true)]
+        [TestCase(1, true, false)]
+        [TestCase(1, true, true)]
+        public void HttpclientHelper_WhenCalled_ReturnsHttpClientObject(int timeout = 0, bool isminute = false, bool acceptMediaType = false)
         {
-            [Test]
-            public void TestSetup_NoParameters()
-            {
-                var test = new HttpClientHelper().SetupClient();
-                Assert.IsNotNull(test);
-            }
-
-            [Test]
-            public void TestSetup_TimeouWithValue_IsMinutesFalse()
-            {
-                var test = new HttpClientHelper().SetupClient(1, false);
-                Assert.IsNotNull(test);
-                Assert.Equals(1, test.Timeout);
-
+            var test = new HttpClientHelper().SetupClient();
+            Assert.IsNotNull(test);
         }
 
         [Test]
-            public void TestSetup_TimeouWithValue_IsMinutesTrue()
-            {
-                var test = new HttpClientHelper().SetupClient(2);
-                Assert.IsNotNull(test);
-                Assert.Equals(2, test.Timeout);
-            }
+        public void SetupClient_WithTimeoutInMinutes_ReturnsHttpClientWithTimeout()
+        {
+            var httpClientHelper = new HttpClientHelper();
+            var client = httpClientHelper.SetupClient(timeOut: 30);
+            Assert.That(client.Timeout, Is.EqualTo(TimeSpan.FromMinutes(30)));
+        }
 
-            [Test]
-            public void TestSetup_WithAcceptMediaNoType()
-            {
-                var test = new HttpClientHelper().SetupClient(3, false, true);
-                Assert.IsNotNull(test);
-                Assert.Equals(3, test.Timeout);
-                Assert.IsEmpty(test.DefaultRequestHeaders.Accept);
-            }
+        [Test]
+        public void SetupClient_WithTimeoutInSeconds_ReturnsHttpClientWithTimeout()
+        {
+            var httpClientHelper = new HttpClientHelper();
+            var client = httpClientHelper.SetupClient(timeOut: 30, isMinutes: false);
+            Assert.That(client.Timeout, Is.EqualTo(TimeSpan.FromSeconds(30)));
+        }
 
-            [Test]
-            public void TestSetup_WithAcceptMediaAndType()
-            {
-                var test = new HttpClientHelper().SetupClient(4, false, true, "application/json");
-                Assert.IsNotNull(test);
-                Assert.Equals(3, test.Timeout);
-                Assert.Equals(1, test.DefaultRequestHeaders.Accept.Count);
-                Assert.Equals("application/json", test.DefaultRequestHeaders.Accept.First());
-            }
+        [Test]
+        public void SetupClient_WithAcceptMediaType_ReturnsHttpClientWithAcceptMediaType()
+        {
+            var httpClientHelper = new HttpClientHelper();
+            var client = httpClientHelper.SetupClient(acceptMediaType: true, mediaType: "application/json");
+            Assert.That(client.DefaultRequestHeaders.Accept.First().MediaType, Is.EqualTo("application/json"));
+        }
+
+        [Test]
+        public void SetupClient_WithoutAcceptMediaType_ReturnsHttpClientWithoutAcceptMediaType()
+        {
+            var httpClientHelper = new HttpClientHelper();
+            var client = httpClientHelper.SetupClient();
+            Assert.IsFalse(client.DefaultRequestHeaders.Accept.Any());
         }
     }
+}
 
 

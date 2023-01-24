@@ -1,0 +1,98 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/anandraj/Projects/WeatherReport/WeatherReportShared/WeatherReport.Core.csproj": {}
+  },
+  "projects": {
+    "/Users/anandraj/Projects/WeatherReport/WeatherReportShared/WeatherReport.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/anandraj/Projects/WeatherReport/WeatherReportShared/WeatherReport.Core.csproj",
+        "projectName": "WeatherReport.Core",
+        "projectPath": "/Users/anandraj/Projects/WeatherReport/WeatherReportShared/WeatherReport.Core.csproj",
+        "packagesPath": "/Users/anandraj/.nuget/packages/",
+        "outputPath": "/Users/anandraj/Projects/WeatherReport/WeatherReportShared/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/anandraj/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
+            "CommunityToolkit.Mvvm": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "InteractiveAlerts": {
+              "target": "Package",
+              "version": "[0.1.8, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
+            "Xamarin.CommunityToolkit": {
+              "target": "Package",
+              "version": "[2.0.5, )"
+            },
+            "Xamarin.Essentials": {
+              "target": "Package",
+              "version": "[1.7.4, )"
+            },
+            "Xamarin.Essentials.Interfaces": {
+              "target": "Package",
+              "version": "[1.7.4, )"
+            },
+            "sqlite-net-pcl": {
+              "target": "Package",
+              "version": "[1.8.116, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.426/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

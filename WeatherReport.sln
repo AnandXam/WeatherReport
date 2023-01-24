@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherReport.Android", "We
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherReport.ios", "WeatherReport.ios\WeatherReport.ios.csproj", "{9F027E3E-5ADE-4EFE-AEE1-6756AD35FCD5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherReportShared", "WeatherReportShared\WeatherReportShared.csproj", "{459D99BD-5FBC-4228-9C23-90E0A9B7C1C0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherReport.Core", "WeatherReportShared\WeatherReport.Core.csproj", "{459D99BD-5FBC-4228-9C23-90E0A9B7C1C0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherReport.Test", "WeatherReport.Test\WeatherReport.Test.csproj", "{20E17C9B-3F10-44E1-BF0A-196A68B51A58}"
 EndProject

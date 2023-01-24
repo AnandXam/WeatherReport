@@ -15,7 +15,7 @@ namespace WeatherReport.ios
     public partial class ViewController : UIViewController, IAutocompleteViewControllerDelegate
     {
         WeatherViewModel ViewModel { get; set; }
-        OneCallAPI openWeatherMap = new OneCallAPI();
+        OneCallAPIResponseModel openWeatherMap = new OneCallAPIResponseModel();
 
         public ViewController (IntPtr handle) : base (handle)
         {
@@ -27,7 +27,6 @@ namespace WeatherReport.ios
 
             ViewModel = AppDelegate.Service.GetService<WeatherViewModel>();
             GetLocation();
-            ViewModel.Setup();
             BindResources();
             UITapGestureRecognizer tapGesture = new UITapGestureRecognizer(Tap);
             tapGesture.NumberOfTapsRequired = 1;

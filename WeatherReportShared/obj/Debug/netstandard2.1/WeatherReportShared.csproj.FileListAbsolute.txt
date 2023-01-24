@@ -15,4 +15,3 @@
 /Users/anandraj/Projects/WeatherReport/WeatherReportShared/obj/Debug/netstandard2.1/WeatherReportShared.csproj.CoreCompileInputs.cache
 /Users/anandraj/Projects/WeatherReport/WeatherReportShared/obj/Debug/netstandard2.1/WeatherReportShared.dll
 /Users/anandraj/Projects/WeatherReport/WeatherReportShared/obj/Debug/netstandard2.1/WeatherReportShared.pdb
-/Users/anandraj/Projects/WeatherReport/WeatherReportShared/obj/Debug/netstandard2.1/WeatherReportShared.csproj.AssemblyReference.cache

@@ -1,4 +1,6 @@
 ﻿using System;
+using WeatherReport.Core.Interfaces;
+using WeatherReportShared.Interfaces;
 using Xamarin.Essentials;
 
 namespace WeatherReportShared.ViewModel
@@ -13,6 +15,11 @@ namespace WeatherReportShared.ViewModel
         }
 
         string? sunset;
+
+        public SuriseViewModel(IWeatherService weatherService, IConnectivityService connectivity, IAlertService alertService, IRepository repository) : base(weatherService, connectivity, alertService, repository)
+        {
+        }
+
         public string Sunset
         {
             get => sunset;
@@ -23,6 +30,8 @@ namespace WeatherReportShared.ViewModel
             Sunrise = DateTimeOffset.FromUnixTimeSeconds(WeatherData.current.sunrise).DateTime.ToString("hh:mm tt");
             Sunset = DateTimeOffset.FromUnixTimeSeconds(WeatherData.current.sunset).DateTime.ToString("hh:mm tt");
         }
+        //TODO need to chnage
+        // Pass data through navigation
 
     }
 }

@@ -13,9 +13,17 @@ namespace WeatherReportShared.Services
 {
     public class WeatherService : IWeatherService
     {
-        BaseViewModel viewModel => (BaseViewModel)Startup.ServiceProvider.GetService(typeof(BaseViewModel));
+        
+        public async Task<OneCallAPIResponseModel> GetWeatherForLocation(double lng, double lat)
+        {
+            //Todo change to const
+            var api = "lat=";
+            var pars = $"{lat}&lon={lng}";
+            var data = await GetOneCallAPIResposnse<OneCallAPIResponseModel>(api, pars);
+            return data;
+        }
 
-        async Task<T> GetSingleItem<T>(string api, string pars)
+        async Task<T> GetOneCallAPIResposnse<T>(string api, string pars)
         {
             var result = Activator.CreateInstance<T>();
             try
@@ -38,21 +46,7 @@ namespace WeatherReportShared.Services
 
             }
             return result;
-        }
-
-        public async Task<OneCallAPI> GetWeatherForLocation(double lng, double lat)
-        {
-            if (viewModel.IsConnected)
-            {
-                var api = "lat=";
-                var pars = $"{lat}&lon={lng}";
-                var data = await GetSingleItem<OneCallAPI>(api, pars);
-                return data;
-            }
-            else
-                return default;
-        }
-
+        }    
     }
 }
 

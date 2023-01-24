@@ -1,6 +1,1 @@
-<?xml version="1.0" encoding='utf-8' standalone='no'?>
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-<!-- blaze-out/k8-opt/genfiles/java/com/google/android/gmscore/integ/client/common/res/values-gl/strings.xml -->
-<eat-comment/>
-<string name="common_google_play_services_unknown_issue" msgid="2518680582564677258">"<xliff:g id="APP_NAME">%1$s</xliff:g> ten problemas cos servizos de Google Play. Téntao de novo."</string>
-</resources>
+<resources><!-- blaze-out/k8-opt/genfiles/java/com/google/android/libraries/places/res/values-gl/strings.xml --><eat-comment /><string name="places_autocomplete_clear_button">Borrar busca</string><string name="places_autocomplete_label">Indica un lugar</string><string name="places_autocomplete_no_results_for_query">Non se atoparon resultados para %1$s</string><string name="places_autocomplete_search_hint">Buscar</string><string name="places_cancel">Cancelar</string><string name="places_powered_by_google">Con tecnoloxía de Google</string><string name="places_search_error">Produciuse un erro ao cargar os resultados da busca.</string><string name="places_try_again">Tentar de novo</string></resources>

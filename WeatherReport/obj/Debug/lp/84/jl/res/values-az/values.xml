@@ -1,6 +1,1 @@
-<?xml version="1.0" encoding='utf-8' standalone='no'?>
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-<!-- blaze-out/k8-opt/genfiles/java/com/google/android/gmscore/integ/client/common/res/values-az/strings.xml -->
-<eat-comment/>
-<string name="common_google_play_services_unknown_issue" msgid="2518680582564677258">"<xliff:g id="APP_NAME">%1$s</xliff:g> tətbiqi ilə Google Play xidmətləri arasında problem var. Daha sonra yenidən cəhd edin."</string>
-</resources>
+<resources><!-- blaze-out/k8-opt/genfiles/java/com/google/android/libraries/places/res/values-az/strings.xml --><eat-comment /><string name="places_autocomplete_clear_button">Axtarışı silin</string><string name="places_autocomplete_label">Yer seçin</string><string name="places_autocomplete_no_results_for_query">%1$s üçün nəticə yoxdur</string><string name="places_autocomplete_search_hint">Axtarış</string><string name="places_cancel">Ləğv edin</string><string name="places_powered_by_google">Google tərəfindən dəstəklənir</string><string name="places_search_error">Axtarış nəticələri yüklənmir.</string><string name="places_try_again">Yenə cəhd edin</string></resources>

@@ -42,6 +42,10 @@
               "target": "Package",
               "version": "[8.0.0, )"
             },
+            "InteractiveAlerts": {
+              "target": "Package",
+              "version": "[0.1.8, )"
+            },
             "Microsoft.Extensions.DependencyInjection": {
               "target": "Package",
               "version": "[7.0.0, )"

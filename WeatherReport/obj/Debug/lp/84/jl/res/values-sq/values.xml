@@ -1,6 +1,1 @@
-<?xml version="1.0" encoding='utf-8' standalone='no'?>
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-<!-- blaze-out/k8-opt/genfiles/java/com/google/android/gmscore/integ/client/common/res/values-sq/strings.xml -->
-<eat-comment/>
-<string name="common_google_play_services_unknown_issue" msgid="2518680582564677258">"<xliff:g id="APP_NAME">%1$s</xliff:g> ka probleme me shërbimet e Google Play. Provo sërish."</string>
-</resources>
+<resources><!-- blaze-out/k8-opt/genfiles/java/com/google/android/libraries/places/res/values-sq/strings.xml --><eat-comment /><string name="places_autocomplete_clear_button">Pastro kërkimin</string><string name="places_autocomplete_label">Zgjidh një vend</string><string name="places_autocomplete_no_results_for_query">Asnjë rezultat për %1$s</string><string name="places_autocomplete_search_hint">Kërko</string><string name="places_cancel">Anulo</string><string name="places_powered_by_google">Mundësuar nga Google</string><string name="places_search_error">Rezultatet e kërkimit nuk mund të ngarkohen.</string><string name="places_try_again">Provo sërish</string></resources>

@@ -1,6 +1,1 @@
-<?xml version="1.0" encoding='utf-8' standalone='no'?>
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-<!-- blaze-out/k8-opt/genfiles/java/com/google/android/gmscore/integ/client/common/res/values-et/strings.xml -->
-<eat-comment/>
-<string name="common_google_play_services_unknown_issue" msgid="2518680582564677258">"Rakendusel <xliff:g id="APP_NAME">%1$s</xliff:g> on probleeme Google Play teenustega. Proovige uuesti."</string>
-</resources>
+<resources><!-- blaze-out/k8-opt/genfiles/java/com/google/android/libraries/places/res/values-et/strings.xml --><eat-comment /><string name="places_autocomplete_clear_button">Tühjenda otsing</string><string name="places_autocomplete_label">Koha valimine</string><string name="places_autocomplete_no_results_for_query">Päringule %1$s ei leitud ühtegi tulemust</string><string name="places_autocomplete_search_hint">Otsige</string><string name="places_cancel">Tühista</string><string name="places_powered_by_google">Töötab Google\'i platvormil</string><string name="places_search_error">Otsingutulemusi ei saa laadida.</string><string name="places_try_again">Proovi uuesti</string></resources>

@@ -1,6 +1,1 @@
-<?xml version="1.0" encoding='utf-8' standalone='no'?>
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-<!-- blaze-out/k8-opt/genfiles/java/com/google/android/gmscore/integ/client/common/res/values-ne/strings.xml -->
-<eat-comment/>
-<string name="common_google_play_services_unknown_issue" msgid="2518680582564677258">"<xliff:g id="APP_NAME">%1$s</xliff:g> लाई Google Play services सँग सहकार्य गर्न समस्या भइरहेको छ। कृपया फेरि प्रयास गर्नुहोस्।"</string>
-</resources>
+<resources><!-- blaze-out/k8-opt/genfiles/java/com/google/android/libraries/places/res/values-ne/strings.xml --><eat-comment /><string name="places_autocomplete_clear_button">खोज खाली गर्नुहोस्</string><string name="places_autocomplete_label">कुनै ठाँउ छान्नुहोस्</string><string name="places_autocomplete_no_results_for_query">%1$s को कुनै पनि परिणाम छैन</string><string name="places_autocomplete_search_hint">खोज</string><string name="places_cancel">रद्द गर्नुहोस्‌</string><string name="places_powered_by_google">Google द्वारा सञ्चालित</string><string name="places_search_error">खोज परिणाम लोड गर्न सकिएन।</string><string name="places_try_again">फेरि प्रयास गर्नु…</string></resources>

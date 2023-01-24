@@ -1,13 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "FWScaKx2FgLYpN2QLP2o2Yck4jO5pGDZqRzU1Amyvqxq3YuYZ3KcOGY+uwvwxjRu+R/dwcLRQXEWdjiWxpd63Q==",
+  "dgSpecHash": "kVZpkz8asC/4Ef1aq3xmOYmdrWoEzqSknCw74Xs/JmJtK3atKkzjJXChotaRJDpIsh/zdmr7w2h8o3wNQP3HRA==",
   "success": true,
   "projectFilePath": "/Users/anandraj/Projects/WeatherReport/WeatherReport.Test/WeatherReport.Test.csproj",
   "expectedPackageFiles": [
+    "/Users/anandraj/.nuget/packages/automapper/12.0.1/automapper.12.0.1.nupkg.sha512",
     "/Users/anandraj/.nuget/packages/castle.core/5.1.1/castle.core.5.1.1.nupkg.sha512",
     "/Users/anandraj/.nuget/packages/communitytoolkit.mvvm/8.0.0/communitytoolkit.mvvm.8.0.0.nupkg.sha512",
     "/Users/anandraj/.nuget/packages/coverlet.collector/3.1.2/coverlet.collector.3.1.2.nupkg.sha512",
+    "/Users/anandraj/.nuget/packages/interactivealerts/0.1.8/interactivealerts.0.1.8.nupkg.sha512",
     "/Users/anandraj/.nuget/packages/microsoft.codecoverage/17.3.2/microsoft.codecoverage.17.3.2.nupkg.sha512",
+    "/Users/anandraj/.nuget/packages/microsoft.csharp/4.7.0/microsoft.csharp.4.7.0.nupkg.sha512",
     "/Users/anandraj/.nuget/packages/microsoft.extensions.dependencyinjection/7.0.0/microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
     "/Users/anandraj/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/7.0.0/microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
     "/Users/anandraj/.nuget/packages/microsoft.net.test.sdk/17.3.2/microsoft.net.test.sdk.17.3.2.nupkg.sha512",
@@ -26,9 +29,15 @@
     "/Users/anandraj/.nuget/packages/nunit3testadapter/4.2.1/nunit3testadapter.4.2.1.nupkg.sha512",
     "/Users/anandraj/.nuget/packages/opentk/3.0.1/opentk.3.0.1.nupkg.sha512",
     "/Users/anandraj/.nuget/packages/opentk.glcontrol/3.0.1/opentk.glcontrol.3.0.1.nupkg.sha512",
+    "/Users/anandraj/.nuget/packages/sqlite-net-pcl/1.8.116/sqlite-net-pcl.1.8.116.nupkg.sha512",
+    "/Users/anandraj/.nuget/packages/sqlitepclraw.bundle_green/2.0.4/sqlitepclraw.bundle_green.2.0.4.nupkg.sha512",
+    "/Users/anandraj/.nuget/packages/sqlitepclraw.core/2.0.4/sqlitepclraw.core.2.0.4.nupkg.sha512",
+    "/Users/anandraj/.nuget/packages/sqlitepclraw.lib.e_sqlite3/2.0.4/sqlitepclraw.lib.e_sqlite3.2.0.4.nupkg.sha512",
+    "/Users/anandraj/.nuget/packages/sqlitepclraw.provider.dynamic_cdecl/2.0.4/sqlitepclraw.provider.dynamic_cdecl.2.0.4.nupkg.sha512",
     "/Users/anandraj/.nuget/packages/system.collections/4.3.0/system.collections.4.3.0.nupkg.sha512",
     "/Users/anandraj/.nuget/packages/system.componentmodel.annotations/5.0.0/system.componentmodel.annotations.5.0.0.nupkg.sha512",
     "/Users/anandraj/.nuget/packages/system.diagnostics.eventlog/4.7.0/system.diagnostics.eventlog.4.7.0.nupkg.sha512",
+    "/Users/anandraj/.nuget/packages/system.memory/4.5.3/system.memory.4.5.3.nupkg.sha512",
     "/Users/anandraj/.nuget/packages/system.numerics.vectors/4.5.0/system.numerics.vectors.4.5.0.nupkg.sha512",
     "/Users/anandraj/.nuget/packages/system.reflection.metadata/1.6.0/system.reflection.metadata.1.6.0.nupkg.sha512",
     "/Users/anandraj/.nuget/packages/system.runtime/4.3.0/system.runtime.4.3.0.nupkg.sha512",
@@ -39,10 +48,21 @@
     "/Users/anandraj/.nuget/packages/system.threading.tasks.extensions/4.3.0/system.threading.tasks.extensions.4.3.0.nupkg.sha512",
     "/Users/anandraj/.nuget/packages/xamarin.communitytoolkit/2.0.5/xamarin.communitytoolkit.2.0.5.nupkg.sha512",
     "/Users/anandraj/.nuget/packages/xamarin.essentials/1.7.4/xamarin.essentials.1.7.4.nupkg.sha512",
+    "/Users/anandraj/.nuget/packages/xamarin.essentials.interfaces/1.7.4/xamarin.essentials.interfaces.1.7.4.nupkg.sha512",
     "/Users/anandraj/.nuget/packages/xamarin.forms/5.0.0.2291/xamarin.forms.5.0.0.2291.nupkg.sha512",
     "/Users/anandraj/.nuget/packages/xamarin.forms.platform.wpf/5.0.0.2291/xamarin.forms.platform.wpf.5.0.0.2291.nupkg.sha512"
   ],
   "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'InteractiveAlerts 0.1.8' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "InteractiveAlerts",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    },
     {
       "code": "NU1701",
       "level": "Warning",

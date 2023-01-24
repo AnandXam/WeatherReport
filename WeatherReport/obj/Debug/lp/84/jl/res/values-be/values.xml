@@ -1,6 +1,1 @@
-<?xml version="1.0" encoding='utf-8' standalone='no'?>
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-<!-- blaze-out/k8-opt/genfiles/java/com/google/android/gmscore/integ/client/common/res/values-be/strings.xml -->
-<eat-comment/>
-<string name="common_google_play_services_unknown_issue" msgid="2518680582564677258">"У праграмы <xliff:g id="APP_NAME">%1$s</xliff:g> узніклі праблемы са службамі Google Play. Паўтарыце спробу."</string>
-</resources>
+<resources><!-- blaze-out/k8-opt/genfiles/java/com/google/android/libraries/places/res/values-be/strings.xml --><eat-comment /><string name="places_autocomplete_clear_button">Ачысціць поле пошуку</string><string name="places_autocomplete_label">Выберыце месца</string><string name="places_autocomplete_no_results_for_query">Няма вынікаў па запыце \"%1$s\"</string><string name="places_autocomplete_search_hint">Пошук</string><string name="places_cancel">Скасаваць</string><string name="places_powered_by_google">На платформе Google</string><string name="places_search_error">Не ўдалося загрузіць вынікі пошуку.</string><string name="places_try_again">Паўтарыць спробу</string></resources>

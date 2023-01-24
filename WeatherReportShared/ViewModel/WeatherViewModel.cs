@@ -2,31 +2,55 @@
 using System.Threading.Tasks;
 using CommunityToolkit.Mvvm.Input;
 using CommunityToolkit.Mvvm.Messaging;
+using InteractiveAlert;
+using WeatherReport.Core.Interfaces;
+using WeatherReport.Core.Model;
 using WeatherReportShared.Interfaces;
 using WeatherReportShared.Model;
 using Xamarin.Essentials;
 
+#nullable enable
 namespace WeatherReportShared.ViewModel
 {
     public class WeatherViewModel : BaseViewModel
     {
-        IWeatherService webservice => (IWeatherService)Startup.ServiceProvider.GetService(typeof(IWeatherService));
-        IMessenger messenger => (IMessenger)Startup.ServiceProvider.GetService(typeof(IMessenger));
+        #region Private Properties
+        private readonly IWeatherService weatherService;
+        private readonly IConnectivityService connectivity;
+        private readonly IAlertService alertService;
+        private readonly IRepository repository;
+        private bool canUseGeoloc;
+        private Location location;
+        private string placeName;
+        private string geoloc;
+        private string country;
+        private bool showData;
+        private double latitude;
+        private double longitude;
+        private string weatherDescp;
+        private string wind;
+        private string humidity;
+        private string feelsLike;
+        private string date;
+        private string temperature;
+        private string weatherImageURL;
+        private bool isLocationDefaulted;
+        private object alertService1;
+        #endregion Private Properties
 
-        public void Setup()
+        #region Constructor
+        public WeatherViewModel(IWeatherService weatherService, IConnectivityService connectivity, IAlertService alertService, IRepository repository)
         {
-            var lastUsedLatitude = Preferences.Get("LocationLatitude", 0.0);
-            var lastUsedLongitude = Preferences.Get("LocationLongitude", 0.0);
-            if (lastUsedLatitude != 0 && lastUsedLongitude != 0)
-            {
-                Latitude = lastUsedLatitude;
-                Longitude = lastUsedLongitude;
-                IsLocationDefaulted = true;
-            }
-            getWeatherData();
+            this.weatherService = weatherService;
+            this.connectivity = connectivity;
+            this.alertService = alertService;
+            this.repository = repository;
+            checkForSavedLocation();
         }
 
-        bool canUseGeoloc;
+        #endregion Constructor
+
+        #region Public Properties
         public bool CanUseGeoloc
         {
             get => canUseGeoloc;
@@ -36,7 +60,6 @@ namespace WeatherReportShared.ViewModel
             }
         }
 
-        Location? location; 
         public Location Location
         {
             get => location;
@@ -47,98 +70,84 @@ namespace WeatherReportShared.ViewModel
                 Longitude = value.Longitude;
             }
         }
-        string? placeName;
         public string PlaceName
         {
-            get => placeName;
+            get => placeName!;
             set => SetProperty(ref placeName, value);
         }
 
-        string? geoloc;
         public string Geoloc
         {
             get => geoloc;
             set => SetProperty(ref geoloc, value);
         }
-        public static OneCallAPI? WeatherData { get; set; }
+        public static OneCallAPIResponseModel? WeatherData { get; set; }
 
-        bool showData;
         public bool ShowData
         {
             get => showData;
             set => SetProperty(ref showData, value);
         }
 
-        string? country;
         public string Country
         {
             get => country;
             set => SetProperty(ref country, value);
         }
-        double latitude;
         public double Latitude
         {
             get => latitude;
             set => SetProperty(ref latitude, value);
         }
 
-        double longitude;
         public double Longitude
         {
             get => longitude;
             set => SetProperty(ref longitude, value);
         }
 
-        string? weatherDescp;
         public string WeatherDescp
         {
             get => weatherDescp;
             set => SetProperty(ref weatherDescp, value);
         }
 
-        string? wind;
         public string Wind
         {
             get => wind;
             set => SetProperty(ref wind, value);
         }
 
-        string? humidity;
         public string Humidity
         {
             get => humidity;
             set => SetProperty(ref humidity, value);
         }
 
-        string? feelsLike;
         public string FeelsLike
         {
             get => feelsLike;
             set => SetProperty(ref feelsLike, value);
         }
 
-        string? date;
         public string Data
         {
             get => date;
             set => SetProperty(ref date, value);
         }
 
-        string? temperature;
         public string Temperature
         {
             get => temperature;
             set => SetProperty(ref temperature, value);
         }
 
-        string? weatherImageURL;
         public string WeatherImageURL
         {
             get => weatherImageURL;
             set => SetProperty(ref weatherImageURL, value);
         }
 
-        bool isLocationDefaulted;
         public bool IsLocationDefaulted
         {
             get => isLocationDefaulted;
@@ -149,7 +158,15 @@ namespace WeatherReportShared.ViewModel
             }
         }
 
-        void DisplayPlace()
+        SqliteUserSettingModel? SqliteUserSettingModel { get; set; }
+
+        #endregion Public Properties
+
+
+        /// <summary>
+        /// Display Weather Details
+        /// </summary>
+        public void DisplayPlace()
         {
             WeatherDescp = $"{WeatherData.current.weather[0].main}";
             PlaceName = $"{WeatherData.timezone}";
@@ -162,25 +179,44 @@ namespace WeatherReportShared.ViewModel
         }
 
         /// <summary>
-        /// Saving Data to preference
+        /// Checking wheather location already saved
         /// </summary>
-        void SaveSettings()
+        public async void checkForSavedLocation()
         {
-            Preferences.Set("LocationLatitude", Latitude);
-            Preferences.Set("LocationLongitude", Longitude);
-            Preferences.Set("PlaceName", PlaceName);
+           // var lastUsedLatitude = Preferences.Get("LocationLatitude", 0.0);
+            //var lastUsedLongitude = Preferences.Get("LocationLongitude", 0.0);
+
+            var savedUserPreference= repository.GetData<SqliteUserSettingModel>();
+            if (savedUserPreference != null)
+            {
+                if (savedUserPreference.SavedLatitude != 0 && savedUserPreference.SavedLongitude != 0)
+                {
+                    Latitude = savedUserPreference.SavedLatitude;
+                    Longitude = savedUserPreference.SavedLongitude;
+                }
+            }
+            else
+            {
+                SqliteUserSettingModel = new SqliteUserSettingModel();
+            }
+
+            if (connectivity.IsConnected)
+            {
+                WeatherData = await getWeatherData();
+                if (WeatherData != null)
+                {
+                    DisplayPlace();
+                }
+            }
+
         }
         /// <summary>
         /// Fetching weather data Froms service
         /// </summary>
-        public async void getWeatherData()
+        public async Task<OneCallAPIResponseModel> getWeatherData()
         {
-            var data = await webservice.GetWeatherForLocation(Longitude, Latitude);
-            if (data != null)
-            {
-                WeatherData = data;
-                DisplayPlace();
-            }
+            var data = await weatherService.GetWeatherForLocation(Longitude, Latitude);
+            return data;
         }
         /// <summary>
         /// Save Location
@@ -189,12 +225,18 @@ namespace WeatherReportShared.ViewModel
         {
             if (!IsLocationDefaulted)
                 return;
-            Preferences.Set("LocationLatitude", Latitude);
-            Preferences.Set("LocationLongitude", Longitude);
-            Preferences.Set("PlaceName", PlaceName);
+            //Preferences.Set("LocationLatitude", Latitude);
+            //Preferences.Set("LocationLongitude", Longitude);
+            //Preferences.Set("PlaceName", PlaceName);
 
+            if (Latitude != 0 && Longitude != 0)
+            {
+                SqliteUserSettingModel.SavedLatitude = Latitude;
+                SqliteUserSettingModel.SavedLongitude = Longitude;
+                SqliteUserSettingModel.PlaceName = PlaceName;
+                repository.SaveData(SqliteUserSettingModel);
+            }
         }
     }
 }
 
- 

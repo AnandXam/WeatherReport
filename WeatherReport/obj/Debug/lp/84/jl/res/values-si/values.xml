@@ -1,6 +1,1 @@
-<?xml version="1.0" encoding='utf-8' standalone='no'?>
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-<!-- blaze-out/k8-opt/genfiles/java/com/google/android/gmscore/integ/client/common/res/values-si/strings.xml -->
-<eat-comment/>
-<string name="common_google_play_services_unknown_issue" msgid="2518680582564677258">"<xliff:g id="APP_NAME">%1$s</xliff:g> හට Google Play සේවා සමගින් ගැටලු ඇත. කරුණාකර නැවත උත්සාහ කරන්න."</string>
-</resources>
+<resources><!-- blaze-out/k8-opt/genfiles/java/com/google/android/libraries/places/res/values-si/strings.xml --><eat-comment /><string name="places_autocomplete_clear_button">සෙවීම හිස් කරන්න</string><string name="places_autocomplete_label">තැනක් තෝරා ගන්න</string><string name="places_autocomplete_no_results_for_query">%1$s සඳහා ප්‍රතිඵල නැත</string><string name="places_autocomplete_search_hint">සෙවීම</string><string name="places_cancel">අවලංගු කරන්න</string><string name="places_powered_by_google">Google වෙතින් බල ගැන්වූ</string><string name="places_search_error">සෙවීම් ප්‍රතිඵල පූරණ කළ නොහැක.</string><string name="places_try_again">නැවත උත්සාහ කරන්න</string></resources>

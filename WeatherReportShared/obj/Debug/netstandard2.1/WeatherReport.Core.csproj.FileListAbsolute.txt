@@ -1,0 +1,9 @@
+/Users/anandraj/Projects/WeatherReport/WeatherReportShared/bin/Debug/netstandard2.1/WeatherReport.Core.deps.json
+/Users/anandraj/Projects/WeatherReport/WeatherReportShared/bin/Debug/netstandard2.1/WeatherReport.Core.dll
+/Users/anandraj/Projects/WeatherReport/WeatherReportShared/bin/Debug/netstandard2.1/WeatherReport.Core.pdb
+/Users/anandraj/Projects/WeatherReport/WeatherReportShared/obj/Debug/netstandard2.1/WeatherReport.Core.AssemblyInfoInputs.cache
+/Users/anandraj/Projects/WeatherReport/WeatherReportShared/obj/Debug/netstandard2.1/WeatherReport.Core.AssemblyInfo.cs
+/Users/anandraj/Projects/WeatherReport/WeatherReportShared/obj/Debug/netstandard2.1/WeatherReport.Core.csproj.CoreCompileInputs.cache
+/Users/anandraj/Projects/WeatherReport/WeatherReportShared/obj/Debug/netstandard2.1/WeatherReport.Core.dll
+/Users/anandraj/Projects/WeatherReport/WeatherReportShared/obj/Debug/netstandard2.1/WeatherReport.Core.pdb
+/Users/anandraj/Projects/WeatherReport/WeatherReportShared/obj/Debug/netstandard2.1/WeatherReport.Core.csproj.AssemblyReference.cache

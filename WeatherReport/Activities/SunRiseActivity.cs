@@ -12,11 +12,11 @@ using Android.Views;
 using Android.Widget;
 using Com.Airbnb.Lottie;
 using Org.W3c.Dom;
-using Microsoft.Extensions.DependencyInjection;
 using AndroidX.AppCompat.App;
 using Android.Graphics.Drawables;
 using static Android.Content.Res.Resources;
 using Android.Support.V7.App;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace WeatherReport.Activities
 {

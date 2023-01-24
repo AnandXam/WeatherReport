@@ -105,7 +105,8 @@ namespace WeatherReportShared.Model
         public double? rain { get; set; }
     }
 
-    public class OneCallAPI
+    //TODO chnGW
+    public class OneCallAPIResponseModel
     {
         public double lat { get; set; }
         public double lon { get; set; }

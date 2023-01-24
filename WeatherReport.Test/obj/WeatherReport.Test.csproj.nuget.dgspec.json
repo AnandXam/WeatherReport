@@ -26,8 +26,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "/Users/anandraj/Projects/WeatherReport/WeatherReportShared/WeatherReportShared.csproj": {
-                "projectPath": "/Users/anandraj/Projects/WeatherReport/WeatherReportShared/WeatherReportShared.csproj"
+              "/Users/anandraj/Projects/WeatherReport/WeatherReportShared/WeatherReport.Core.csproj": {
+                "projectPath": "/Users/anandraj/Projects/WeatherReport/WeatherReportShared/WeatherReport.Core.csproj"
               }
             }
           }
@@ -42,6 +42,10 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
               "version": "[17.3.2, )"
@@ -70,10 +74,6 @@
               "target": "Package",
               "version": "[13.0.2, )"
             },
-            "Xamarin.Essentials": {
-              "target": "Package",
-              "version": "[1.7.4, )"
-            },
             "coverlet.collector": {
               "target": "Package",
               "version": "[3.1.2, )"
@@ -98,12 +98,12 @@
         }
       }
     },
-    "/Users/anandraj/Projects/WeatherReport/WeatherReportShared/WeatherReportShared.csproj": {
+    "/Users/anandraj/Projects/WeatherReport/WeatherReportShared/WeatherReport.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/anandraj/Projects/WeatherReport/WeatherReportShared/WeatherReportShared.csproj",
-        "projectName": "WeatherReportShared",
-        "projectPath": "/Users/anandraj/Projects/WeatherReport/WeatherReportShared/WeatherReportShared.csproj",
+        "projectUniqueName": "/Users/anandraj/Projects/WeatherReport/WeatherReportShared/WeatherReport.Core.csproj",
+        "projectName": "WeatherReport.Core",
+        "projectPath": "/Users/anandraj/Projects/WeatherReport/WeatherReportShared/WeatherReport.Core.csproj",
         "packagesPath": "/Users/anandraj/.nuget/packages/",
         "outputPath": "/Users/anandraj/Projects/WeatherReport/WeatherReportShared/obj/",
         "projectStyle": "PackageReference",
@@ -132,9 +132,17 @@
         "netstandard2.1": {
           "targetAlias": "netstandard2.1",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
             "CommunityToolkit.Mvvm": {
               "target": "Package",
               "version": "[8.0.0, )"
+            },
+            "InteractiveAlerts": {
+              "target": "Package",
+              "version": "[0.1.8, )"
             },
             "Microsoft.Extensions.DependencyInjection": {
               "target": "Package",
@@ -150,7 +158,15 @@
             },
             "Xamarin.Essentials": {
               "target": "Package",
-              "version": "[1.7.3, )"
+              "version": "[1.7.4, )"
+            },
+            "Xamarin.Essentials.Interfaces": {
+              "target": "Package",
+              "version": "[1.7.4, )"
+            },
+            "sqlite-net-pcl": {
+              "target": "Package",
+              "version": "[1.8.116, )"
             }
           },
           "imports": [

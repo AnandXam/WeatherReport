@@ -10,6 +10,7 @@
       "WeatherReportShared/1.0.0": {
         "dependencies": {
           "CommunityToolkit.Mvvm": "8.0.0",
+          "InteractiveAlerts": "0.1.8",
           "Microsoft.Extensions.DependencyInjection": "7.0.0",
           "Newtonsoft.Json": "13.0.1",
           "Xamarin.CommunityToolkit": "2.0.5",
@@ -28,6 +29,18 @@
           "lib/netstandard2.1/CommunityToolkit.Mvvm.dll": {
             "assemblyVersion": "8.0.0.0",
             "fileVersion": "8.0.0.1"
+          }
+        }
+      },
+      "InteractiveAlerts/0.1.8": {
+        "runtime": {
+          "lib/portable-win+net45+wp8+win8+wpa81/InteractiveAlert.Core.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          },
+          "lib/portable-win+net45+wp8+win8+wpa81/InteractiveAlert.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
           }
         }
       },
@@ -134,6 +147,13 @@
       "sha512": "sha512-Jiu2g5WUdXRwzhJkHB+B4JBKP5A5+fp8xKiW/ZQo5PI+DruI7MbPEcK9K/Aw0YzTiWRuG6CBluzYIWN5Eo7BkQ==",
       "path": "communitytoolkit.mvvm/8.0.0",
       "hashPath": "communitytoolkit.mvvm.8.0.0.nupkg.sha512"
+    },
+    "InteractiveAlerts/0.1.8": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-jj1uerxAZN4ufmmvvhlLVQfzsBX9EghmvXDcOm+L+4o3IasgZXeOitvTJjTvchXgHrw2CrL2rpzepYM0vl8sdw==",
+      "path": "interactivealerts/0.1.8",
+      "hashPath": "interactivealerts.0.1.8.nupkg.sha512"
     },
     "Microsoft.Extensions.DependencyInjection/7.0.0": {
       "type": "package",

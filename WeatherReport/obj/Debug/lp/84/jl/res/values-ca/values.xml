@@ -1,6 +1,1 @@
-<?xml version="1.0" encoding='utf-8' standalone='no'?>
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-<!-- blaze-out/k8-opt/genfiles/java/com/google/android/gmscore/integ/client/common/res/values-ca/strings.xml -->
-<eat-comment/>
-<string name="common_google_play_services_unknown_issue" msgid="2518680582564677258">"<xliff:g id="APP_NAME">%1$s</xliff:g> té problemes amb Serveis de Google Play. Torna-ho a provar."</string>
-</resources>
+<resources><!-- blaze-out/k8-opt/genfiles/java/com/google/android/libraries/places/res/values-ca/strings.xml --><eat-comment /><string name="places_autocomplete_clear_button">Esborra la cerca</string><string name="places_autocomplete_label">Tria un lloc</string><string name="places_autocomplete_no_results_for_query">No s\'ha trobat cap resultat per a %1$s</string><string name="places_autocomplete_search_hint">Cerca</string><string name="places_cancel">Cancel·la</string><string name="places_powered_by_google">Amb la tecnologia de Google</string><string name="places_search_error">No es poden carregar els resultats de la cerca.</string><string name="places_try_again">Torna-ho a provar</string></resources>

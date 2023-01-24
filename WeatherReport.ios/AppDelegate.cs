@@ -3,6 +3,7 @@ using Foundation;
 using Google.Places;
 using Microsoft.Extensions.DependencyInjection;
 using UIKit;
+using WeatherReport.ios.Sqlite;
 using WeatherReportShared.ViewModel;
 using Xamarin.Essentials;
 
@@ -23,6 +24,7 @@ namespace WeatherReport.ios
         public bool FinishedLaunching (UIApplication application, NSDictionary launchOptions)
         {
             AppDelegate.Self = this;
+            new SQLiteConnectionFactory().GetConnection();
             Service = WeatherReportShared.Startup.Init();
             weatherViewModel = Service.GetService<WeatherViewModel>();
             var connnect = (Connectivity.NetworkAccess == NetworkAccess.Internet) || (Connectivity.NetworkAccess == NetworkAccess.Local);

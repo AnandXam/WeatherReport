@@ -1,9 +1,13 @@
 ﻿using System;
 using CommunityToolkit.Mvvm.Messaging;
 using Microsoft.Extensions.DependencyInjection;
+using WeatherReport.Core.Database;
+using WeatherReport.Core.Interfaces;
 using WeatherReportShared.Interfaces;
 using WeatherReportShared.Services;
 using WeatherReportShared.ViewModel;
+using Xamarin.Essentials.Implementation;
+using Xamarin.Essentials.Interfaces;
 
 namespace WeatherReportShared.Helpers
 {
@@ -13,8 +17,9 @@ namespace WeatherReportShared.Helpers
         {
             var i = new ServiceCollection();
 
-            i.AddSingleton<IWeatherService, WeatherService>().
-                AddSingleton<IMessenger>(WeakReferenceMessenger.Default);
+            i.AddSingleton<IWeatherService, WeatherService>().AddSingleton<IConnectivityService, ConnectivityService>().AddSingleton<IAlertService, AlertService>().
+                AddSingleton<IMessenger>(WeakReferenceMessenger.Default).AddSingleton<IRepository, SqLiteRepository>().
+                AddSingleton<ISqLiteConnectionFactory, Connection>();
 
             services = i;
 

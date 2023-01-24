@@ -68,7 +68,6 @@
         <Reference Include="System.Numerics.Vectors" />
     </ItemGroup>
     <ItemGroup>
-      <PackageReference Include="Xamarin.Essentials" Version="1.7.3" />
       <PackageReference Include="Newtonsoft.Json">
         <Version>13.0.1</Version>
       </PackageReference>
@@ -77,6 +76,9 @@
       </PackageReference>
       <PackageReference Include="Xamarin.Google.iOS.Places">
         <Version>6.0.0.1</Version>
+      </PackageReference>
+      <PackageReference Include="sqlite-net-pcl">
+        <Version>1.8.116</Version>
       </PackageReference>
     </ItemGroup>
     <ItemGroup>
@@ -96,6 +98,7 @@
     </ItemGroup>
     <ItemGroup>
         <Folder Include="Resources\" />
+        <Folder Include="Sqlite\" />
     </ItemGroup>
     <ItemGroup>
         <InterfaceDefinition Include="LaunchScreen.storyboard" />
@@ -122,12 +125,7 @@
         <Compile Include="AnimationView.designer.cs">
           <DependentUpon>AnimationView.cs</DependentUpon>
         </Compile>
-    </ItemGroup>
-    <ItemGroup>
-      <ProjectReference Include="..\WeatherReportShared\WeatherReportShared.csproj">
-        <Project>{459D99BD-5FBC-4228-9C23-90E0A9B7C1C0}</Project>
-        <Name>WeatherReportShared</Name>
-      </ProjectReference>
+        <Compile Include="Sqlite\Connection.cs" />
     </ItemGroup>
     <ItemGroup>
       <BundleResource Include="Resources\ic_location.png" />
@@ -137,6 +135,12 @@
       <BundleResource Include="Resources\ic_sunrise.png" />
       <BundleResource Include="Resources\ic_sunset.png" />
       <BundleResource Include="Resources\splash_logo.png" />
+    </ItemGroup>
+    <ItemGroup>
+      <ProjectReference Include="..\WeatherReportShared\WeatherReport.Core.csproj">
+        <Project>{459D99BD-5FBC-4228-9C23-90E0A9B7C1C0}</Project>
+        <Name>WeatherReport.Core</Name>
+      </ProjectReference>
     </ItemGroup>
     <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

@@ -14,12 +14,12 @@ using Android.Widget;
 using AndroidX.AppCompat.App;
 using AndroidX.Core.App;
 using Com.Airbnb.Lottie;
-using CommunityToolkit.Mvvm.Messaging;
 using Google.Places;
 using Microsoft.Extensions.DependencyInjection;
 using Newtonsoft.Json;
 using Square.Picasso;
 using WeatherReport.Activities;
+using WeatherReport.Sqlite;
 using WeatherReportShared.Model;
 using WeatherReportShared.ViewModel;
 using Xamarin.Essentials;
@@ -40,12 +40,12 @@ namespace WeatherReport
         LocationManager locationManager;
         WeatherViewModel ViewModel { get; set; }
         BaseViewModel BaseViewModel { get; set; }
-        OneCallAPI openWeatherMap = new OneCallAPI();
         protected override void OnCreate(Bundle savedInstanceState)
         {
-            base.OnCreate(savedInstanceState);
+            base.OnCreate(savedInstanceState);     
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             SetContentView(Resource.Layout.activity_main);
+            new SQLConnection().GetConnection();
             Xamarin.Essentials.Platform.CurrentActivity.Window.SetStatusBarColor(Android.Graphics.Color.ParseColor("#0F0F39"));
             this.MakeDefaultCheckBox = FindViewById<CheckBox>(Resource.Id.MakeDefaultCheckBox);
             this.Windanimation = FindViewById<LottieAnimationView>(Resource.Id.Windanimation);
@@ -59,8 +59,6 @@ namespace WeatherReport
             SearchPlaceCardview = FindViewById<CardView>(Resource.Id.SearchPlaceCardview);
             Service = WeatherReportShared.Startup.Init();
             BaseViewModel = Service.GetService<BaseViewModel>();
-            var connnect = Connectivity.NetworkAccess;
-            BaseViewModel.IsConnected = connnect == NetworkAccess.Internet;
             ViewModel = Service.GetService<WeatherViewModel>();
             requestLocationPermission();
             SearchPlaceCardview.Click += PlaceSearchClicked;
@@ -76,7 +74,6 @@ namespace WeatherReport
                 }
             };
             BindResources();
-            ViewModel.Setup();
             ViewModel.PropertyChanged += ViewModel_PropertyChanged;
             ViewSunriseLabel.Click += NavigateToSunriseScreen;
         }
@@ -216,6 +213,7 @@ namespace WeatherReport
                 }
             });
         }
+        //TODO Navigation using viewmodel
         void NavigateToSunriseScreen(object sender, EventArgs e)
         {
             Intent navigate = new Intent(this, typeof(SunRiseActivity));

@@ -1,6 +1,1 @@
-<?xml version="1.0" encoding='utf-8' standalone='no'?>
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-<!-- blaze-out/k8-opt/genfiles/java/com/google/android/gmscore/integ/client/common/res/values-eu/strings.xml -->
-<eat-comment/>
-<string name="common_google_play_services_unknown_issue" msgid="2518680582564677258">"<xliff:g id="APP_NAME">%1$s</xliff:g> aplikazioak arazoak ditu Google Play-ren zerbitzuekin. Saiatu berriro."</string>
-</resources>
+<resources><!-- blaze-out/k8-opt/genfiles/java/com/google/android/libraries/places/res/values-eu/strings.xml --><eat-comment /><string name="places_autocomplete_clear_button">Garbitu bilaketa</string><string name="places_autocomplete_label">Hautatu tokia</string><string name="places_autocomplete_no_results_for_query">Ez dago %1$s bilaketaren emaitzarik</string><string name="places_autocomplete_search_hint">Bilatu</string><string name="places_cancel">Utzi</string><string name="places_powered_by_google">Google-ren teknologiarekin</string><string name="places_search_error">Ezin dira kargatu bilaketa-emaitzak.</string><string name="places_try_again">Saiatu berriro</string></resources>

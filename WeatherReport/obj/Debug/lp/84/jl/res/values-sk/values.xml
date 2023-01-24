@@ -1,6 +1,1 @@
-<?xml version="1.0" encoding='utf-8' standalone='no'?>
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-<!-- blaze-out/k8-opt/genfiles/java/com/google/android/gmscore/integ/client/common/res/values-sk/strings.xml -->
-<eat-comment/>
-<string name="common_google_play_services_unknown_issue" msgid="2518680582564677258">"Aplikácia <xliff:g id="APP_NAME">%1$s</xliff:g> má problémy so službami Google Play. Skúste to znova."</string>
-</resources>
+<resources><!-- blaze-out/k8-opt/genfiles/java/com/google/android/libraries/places/res/values-sk/strings.xml --><eat-comment /><string name="places_autocomplete_clear_button">Vymazať vyhľadávanie</string><string name="places_autocomplete_label">Výber miesta</string><string name="places_autocomplete_no_results_for_query">Nenašli sa žiadne výsledky pre dopyt %1$s</string><string name="places_autocomplete_search_hint">Vyhľadávanie</string><string name="places_cancel">Zrušiť</string><string name="places_powered_by_google">Používa technológiu Google</string><string name="places_search_error">Výsledky vyhľadávania sa nedajú načítať.</string><string name="places_try_again">Skúsiť znova</string></resources>

@@ -66,6 +66,7 @@
     <Compile Include="Activities\SplashActivity.cs" />
     <Compile Include="Activities\MainActivity.cs" />
     <Compile Include="Activities\SunRiseActivity.cs" />
+    <Compile Include="Sqlite\Connection.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -146,9 +147,9 @@
     <Folder Include="Resources\mipmap-xhdpi\" />
     <Folder Include="Resources\mipmap-xxhdpi\" />
     <Folder Include="Resources\mipmap-xxxhdpi\" />
+    <Folder Include="Sqlite\" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Essentials" Version="1.7.3" />
     <PackageReference Include="Newtonsoft.Json">
       <Version>13.0.1</Version>
     </PackageReference>
@@ -157,6 +158,9 @@
     </PackageReference>
     <PackageReference Include="Xamarin.Google.Android.Material">
       <Version>1.7.0.1</Version>
+    </PackageReference>
+      <PackageReference Include="sqlite-net-pcl">
+      <Version>1.8.116</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Google.Android.Places">
       <Version>2.4.0</Version>
@@ -178,16 +182,16 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\WeatherReportShared\WeatherReportShared.csproj">
-      <Project>{459D99BD-5FBC-4228-9C23-90E0A9B7C1C0}</Project>
-      <Name>WeatherReportShared</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <AndroidAsset Include="Assets\cloud.json" />
     <AndroidAsset Include="Assets\humidity.json" />
     <AndroidAsset Include="Assets\windmill.json" />
     <AndroidAsset Include="Assets\sunrise.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WeatherReportShared\WeatherReport.Core.csproj">
+      <Project>{459D99BD-5FBC-4228-9C23-90E0A9B7C1C0}</Project>
+      <Name>WeatherReport.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

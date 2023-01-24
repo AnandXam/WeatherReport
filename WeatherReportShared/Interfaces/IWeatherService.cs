@@ -6,7 +6,7 @@ namespace WeatherReportShared.Interfaces
 {
     public interface IWeatherService
     {
-        Task<OneCallAPI> GetWeatherForLocation(double lng, double lat);
+        Task<OneCallAPIResponseModel> GetWeatherForLocation(double lng, double lat);
     }
 }
 

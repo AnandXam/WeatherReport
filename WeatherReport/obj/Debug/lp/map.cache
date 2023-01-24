@@ -1,6 +1,8 @@
 FormsViewGroup.dll
 GoogleGson.dll
+InteractiveAlert.dll
 Lottie.Android.dll
+SQLitePCLRaw.lib.e_sqlite3.android.dll
 Square.OkHttp3.dll
 Square.OkIO.dll
 Square.Picasso.dll

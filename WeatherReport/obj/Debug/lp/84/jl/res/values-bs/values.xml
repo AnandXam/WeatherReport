@@ -1,6 +1,1 @@
-<?xml version="1.0" encoding='utf-8' standalone='no'?>
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-<!-- blaze-out/k8-opt/genfiles/java/com/google/android/gmscore/integ/client/common/res/values-bs/strings.xml -->
-<eat-comment/>
-<string name="common_google_play_services_unknown_issue" msgid="2518680582564677258">"Aplikacija <xliff:g id="APP_NAME">%1$s</xliff:g> ima problema s Google Play uslugama. Pokušajte ponovo."</string>
-</resources>
+<resources><!-- blaze-out/k8-opt/genfiles/java/com/google/android/libraries/places/res/values-bs/strings.xml --><eat-comment /><string name="places_autocomplete_clear_button">Obriši pretraživanje</string><string name="places_autocomplete_label">Izbor mjesta</string><string name="places_autocomplete_no_results_for_query">Nije pronađen nijedan rezultat za upit \"%1$s\"</string><string name="places_autocomplete_search_hint">Pretražite</string><string name="places_cancel">Otkaži</string><string name="places_powered_by_google">Pokreće Google</string><string name="places_search_error">Nije moguće učitati rezultate pretraživanja.</string><string name="places_try_again">Pokušaj ponovo</string></resources>

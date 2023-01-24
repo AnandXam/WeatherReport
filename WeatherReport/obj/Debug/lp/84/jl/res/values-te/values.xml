@@ -1,6 +1,1 @@
-<?xml version="1.0" encoding='utf-8' standalone='no'?>
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-<!-- blaze-out/k8-opt/genfiles/java/com/google/android/gmscore/integ/client/common/res/values-te/strings.xml -->
-<eat-comment/>
-<string name="common_google_play_services_unknown_issue" msgid="2518680582564677258">"<xliff:g id="APP_NAME">%1$s</xliff:g> Google Play సేవలతో సమస్య కలిగి ఉంది. దయచేసి మళ్లీ ప్రయత్నించండి."</string>
-</resources>
+<resources><!-- blaze-out/k8-opt/genfiles/java/com/google/android/libraries/places/res/values-te/strings.xml --><eat-comment /><string name="places_autocomplete_clear_button">శోధనను తీసివేయి</string><string name="places_autocomplete_label">ఒక స్థలాన్ని ఎంచుకోండి</string><string name="places_autocomplete_no_results_for_query">%1$s కోసం ఎలాంటి ఫలితాలు లేవు</string><string name="places_autocomplete_search_hint">వెతకండి</string><string name="places_cancel">రద్దు చేయి</string><string name="places_powered_by_google">Google సౌజన్యంతో</string><string name="places_search_error">శోధన ఫలితాలను లోడ్ చేయడం సాధ్యపడదు.</string><string name="places_try_again">మళ్లీ ప్రయత్నించు</string></resources>

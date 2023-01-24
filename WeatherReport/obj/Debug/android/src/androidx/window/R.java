@@ -24,10 +24,10 @@ public final class R {
 		public static final int splitRatio = 0x7f030406;
 	}
 	public static final class id {
-		public static final int androidx_window_activity_scope = 0x7f090060;
-		public static final int locale = 0x7f090115;
-		public static final int ltr = 0x7f090117;
-		public static final int rtl = 0x7f0901a0;
+		public static final int androidx_window_activity_scope = 0x7f090064;
+		public static final int locale = 0x7f09011c;
+		public static final int ltr = 0x7f09011e;
+		public static final int rtl = 0x7f0901a7;
 	}
 	public static final class styleable {
 		public static final int[] ActivityFilter = new int[] { 0x7f030027, 0x7f030029 };
