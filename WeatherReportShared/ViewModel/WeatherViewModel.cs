@@ -34,6 +34,8 @@ namespace WeatherReportShared.ViewModel
         private string date;
         private string temperature;
         private string weatherImageURL;
+        private string  sunrise;
+        private string  sunset;
         private bool isLocationDefaulted;
         private object alertService1;
         #endregion Private Properties
@@ -47,7 +49,6 @@ namespace WeatherReportShared.ViewModel
             this.repository = repository;
             checkForSavedLocation();
         }
-
         #endregion Constructor
 
         #region Public Properties
@@ -59,7 +60,6 @@ namespace WeatherReportShared.ViewModel
                 SetProperty(ref canUseGeoloc, value);
             }
         }
-
         public Location Location
         {
             get => location;
@@ -75,20 +75,17 @@ namespace WeatherReportShared.ViewModel
             get => placeName!;
             set => SetProperty(ref placeName, value);
         }
-
         public string Geoloc
         {
             get => geoloc;
             set => SetProperty(ref geoloc, value);
         }
         public static OneCallAPIResponseModel? WeatherData { get; set; }
-
         public bool ShowData
         {
             get => showData;
             set => SetProperty(ref showData, value);
         }
-
         public string Country
         {
             get => country;
@@ -99,31 +96,26 @@ namespace WeatherReportShared.ViewModel
             get => latitude;
             set => SetProperty(ref latitude, value);
         }
-
         public double Longitude
         {
             get => longitude;
             set => SetProperty(ref longitude, value);
         }
-
         public string WeatherDescp
         {
             get => weatherDescp;
             set => SetProperty(ref weatherDescp, value);
         }
-
         public string Wind
         {
             get => wind;
             set => SetProperty(ref wind, value);
         }
-
         public string Humidity
         {
             get => humidity;
             set => SetProperty(ref humidity, value);
         }
-
         public string FeelsLike
         {
             get => feelsLike;
@@ -135,19 +127,26 @@ namespace WeatherReportShared.ViewModel
             get => date;
             set => SetProperty(ref date, value);
         }
-
         public string Temperature
         {
             get => temperature;
             set => SetProperty(ref temperature, value);
         }
-
         public string WeatherImageURL
         {
             get => weatherImageURL;
             set => SetProperty(ref weatherImageURL, value);
         }
-
+        public string Sunset
+        {
+            get => sunset;
+            set => SetProperty(ref sunset, value);
+        }
+        public string Sunrise
+        {
+            get => sunrise;
+            set => SetProperty(ref sunrise, value);
+        }
         public bool IsLocationDefaulted
         {
             get => isLocationDefaulted;
@@ -157,16 +156,13 @@ namespace WeatherReportShared.ViewModel
                 saveLocation();
             }
         }
-
         SqliteUserSettingModel? SqliteUserSettingModel { get; set; }
-
         #endregion Public Properties
-
 
         /// <summary>
         /// Display Weather Details
         /// </summary>
-        public void DisplayPlace()
+        public void PopulateWeatherDetails()
         {
             WeatherDescp = $"{WeatherData.current.weather[0].main}";
             PlaceName = $"{WeatherData.timezone}";
@@ -176,6 +172,8 @@ namespace WeatherReportShared.ViewModel
             Data = $"{DateTime.Now.ToString("dd MMMM yyyy")}";
             Temperature = $"{WeatherData.current.temp} °F";
             WeatherImageURL = $"{WeatherData.current.weather[0].icon_url}";
+            Sunrise = DateTimeOffset.FromUnixTimeSeconds(WeatherData.current.sunrise).DateTime.ToString("hh:mm tt");
+            Sunset = DateTimeOffset.FromUnixTimeSeconds(WeatherData.current.sunset).DateTime.ToString("hh:mm tt");
         }
 
         /// <summary>
@@ -183,9 +181,6 @@ namespace WeatherReportShared.ViewModel
         /// </summary>
         public async void checkForSavedLocation()
         {
-           // var lastUsedLatitude = Preferences.Get("LocationLatitude", 0.0);
-            //var lastUsedLongitude = Preferences.Get("LocationLongitude", 0.0);
-
             var savedUserPreference= repository.GetData<SqliteUserSettingModel>();
             if (savedUserPreference != null)
             {
@@ -205,11 +200,12 @@ namespace WeatherReportShared.ViewModel
                 WeatherData = await getWeatherData();
                 if (WeatherData != null)
                 {
-                    DisplayPlace();
+                    PopulateWeatherDetails();
                 }
             }
 
         }
+
         /// <summary>
         /// Fetching weather data Froms service
         /// </summary>
@@ -218,6 +214,7 @@ namespace WeatherReportShared.ViewModel
             var data = await weatherService.GetWeatherForLocation(Longitude, Latitude);
             return data;
         }
+
         /// <summary>
         /// Save Location
         /// </summary>
@@ -225,9 +222,6 @@ namespace WeatherReportShared.ViewModel
         {
             if (!IsLocationDefaulted)
                 return;
-            //Preferences.Set("LocationLatitude", Latitude);
-            //Preferences.Set("LocationLongitude", Longitude);
-            //Preferences.Set("PlaceName", PlaceName);
 
             if (Latitude != 0 && Longitude != 0)
             {

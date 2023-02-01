@@ -39,58 +39,59 @@ namespace WeatherReport.Test.VIewModels
 
 
         [Test]
-        public void checkForSavedLocation_ValidSavedLocation_SetsLatitudeAndLongitude()
+        [TestCase(40.730610, -73.935242)]
+        public void checkForSavedLocation_SetsLatitudeAndLongitude_getWeatherData(double expectedLatitude, double expectedLongitude)
         {
-            // Arrange
-            double expectedLatitude = 40.730610;
-            double expectedLongitude = -73.935242;
             repositoryMock.Setup(r => r.GetData<SqliteUserSettingModel>()).Returns(new SqliteUserSettingModel { SavedLatitude = expectedLatitude, SavedLongitude = expectedLongitude });
             var viewModel = new WeatherViewModel(weatherMock.Object, connectivityMock.Object, alertMock.Object, repositoryMock.Object);
 
-            // Act
             viewModel.checkForSavedLocation();
 
-            // Assert
             Assert.That(expectedLatitude, Is.EqualTo(viewModel.Latitude));
             Assert.That(expectedLongitude, Is.EqualTo(viewModel.Longitude));
         }
 
         [Test]
-        public void saveLocation_ValidLocation_SavesLocationToRepository()
+        [TestCase(40.730610, -73.93524)]
+        public void SaveLocation_WhenCalled_SaveTheLocationToSqliteDatabase(double expectedLatitude, double expectedLongitude)
         {
-            // Arrange
-            double expectedLatitude = 40.730610;
-            double expectedLongitude = -73.935242;
             var viewModel = new WeatherViewModel(weatherMock.Object, connectivityMock.Object, alertMock.Object, repositoryMock.Object);
             viewModel.Latitude = expectedLatitude;
             viewModel.Longitude = expectedLongitude;
+            viewModel.IsLocationDefaulted = true;
 
-            // Act
             viewModel.saveLocation();
 
-            // Assert
             repositoryMock.Verify(r => r.SaveData(It.Is<SqliteUserSettingModel>(s => s.SavedLatitude == expectedLatitude && s.SavedLongitude == expectedLongitude)));
         }
 
         [Test]
-        public async Task getWeatherData_ValidCoordinates_ReturnsWeatherData()
+        [TestCase(40.730610, -73.935242)]
+        public async Task getWeatherData_ForValidCoordinates_ReturnsCorrectWeatherData(double expectedLatitude, double expectedLongitude)
         {
-            // Arrange
-            double expectedLatitude = 40.730610;
-            double expectedLongitude = -73.935242;
             weatherMock.Setup(w => w.GetWeatherForLocation(expectedLongitude, expectedLatitude)).ReturnsAsync(new OneCallAPIResponseModel());
             var viewModel = new WeatherViewModel(weatherMock.Object, connectivityMock.Object, alertMock.Object, repositoryMock.Object);
             viewModel.Latitude = expectedLatitude;
             viewModel.Longitude = expectedLongitude;
 
-            // Act
             var result = await viewModel.getWeatherData();
 
-            // Assert
             Assert.IsNotNull(result);
         }
 
+        [Test]
+        [TestCase(40730610001,56236598659)]
+        public async Task getWeatherData_ForInValidCoordinates_ReturnsInCorrectWeatherData(double latitude,double longitude)
+        {
+            weatherMock.Setup(w => w.GetWeatherForLocation(longitude, latitude)).ReturnsAsync(new OneCallAPIResponseModel());
+            var viewModel = new WeatherViewModel(weatherMock.Object, connectivityMock.Object, alertMock.Object, repositoryMock.Object);
+            viewModel.Latitude = latitude;
+            viewModel.Longitude = longitude;
 
+            var result = await viewModel.getWeatherData();
+
+            Assert.IsNull(result.message);
+        }
     }
 }
 

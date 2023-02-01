@@ -9,7 +9,6 @@ namespace WeatherReport.Sqlite
     public class SQLConnection : ISqLiteConnectionFactory
     {
         readonly string Filename = "weather.db";
-
         public void GetConnection()
         {
             var path = Environment.GetFolderPath(Environment.SpecialFolder.Personal);

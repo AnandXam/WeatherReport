@@ -42,8 +42,8 @@ namespace WeatherReport.Activities
             this.sunrsetText = FindViewById<TextView>(Resource.Id.sunsetText);
             Xamarin.Essentials.Platform.CurrentActivity.Window.SetStatusBarColor(Android.Graphics.Color.ParseColor("#0F0F39"));
             suriseViewModel.Initialize();
-            sunriseText.Text = suriseViewModel.Sunrise;
-            sunrsetText.Text = suriseViewModel.Sunset;
+            sunriseText.Text = Intent.GetStringExtra("Sunrise"); 
+            sunrsetText.Text = Intent.GetStringExtra("Sunset");
         }
 
         public override bool OnOptionsItemSelected(IMenuItem item)
@@ -53,7 +53,6 @@ namespace WeatherReport.Activities
             if (item.ItemId == 16908332) // xam forms nav bar back button id
             {
                 base.OnBackPressed();
-
                 return true;
             }
             else

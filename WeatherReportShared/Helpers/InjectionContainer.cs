@@ -16,13 +16,10 @@ namespace WeatherReportShared.Helpers
         public static IServiceCollection ConfigureServices(this IServiceCollection services)
         {
             var i = new ServiceCollection();
-
             i.AddSingleton<IWeatherService, WeatherService>().AddSingleton<IConnectivityService, ConnectivityService>().AddSingleton<IAlertService, AlertService>().
                 AddSingleton<IMessenger>(WeakReferenceMessenger.Default).AddSingleton<IRepository, SqLiteRepository>().
                 AddSingleton<ISqLiteConnectionFactory, Connection>();
-
             services = i;
-
             return services;
         }
 
@@ -31,7 +28,6 @@ namespace WeatherReportShared.Helpers
             services.AddTransient<BaseViewModel>().
                 AddTransient<WeatherViewModel>().
                 AddTransient<SuriseViewModel>();
-
             return services;
         }
     }

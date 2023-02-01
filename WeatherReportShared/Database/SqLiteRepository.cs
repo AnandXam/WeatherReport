@@ -13,7 +13,6 @@ namespace WeatherReport.Core.Database
     {
         readonly SQLiteConnection connection;
         readonly object dbLock;
-
         public const string DBClauseSyncOff = "PRAGMA SYNCHRONOUS=OFF;";
         public const string DBClauseVacuum = "VACUUM;";
         public SqLiteRepository()
@@ -22,7 +21,6 @@ namespace WeatherReport.Core.Database
             CreateTables();
             dbLock = new object();
         }
-
         public void SaveData<T>(T toStore)
         {
             lock (dbLock)

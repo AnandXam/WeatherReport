@@ -12,17 +12,14 @@ using WeatherReportShared.ViewModel;
 namespace WeatherReportShared.Services
 {
     public class WeatherService : IWeatherService
-    {
-        
+    {    
         public async Task<OneCallAPIResponseModel> GetWeatherForLocation(double lng, double lat)
         {
-            //Todo change to const
             var api = "lat=";
             var pars = $"{lat}&lon={lng}";
             var data = await GetOneCallAPIResposnse<OneCallAPIResponseModel>(api, pars);
             return data;
         }
-
         async Task<T> GetOneCallAPIResposnse<T>(string api, string pars)
         {
             var result = Activator.CreateInstance<T>();

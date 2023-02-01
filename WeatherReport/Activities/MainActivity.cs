@@ -78,7 +78,6 @@ namespace WeatherReport
             ViewSunriseLabel.Click += NavigateToSunriseScreen;
         }
 
-
         private void BindResources()
         {
             this.Cityext = this.FindViewById<TextView>(Resource.Id.Cityext);
@@ -106,7 +105,6 @@ namespace WeatherReport
                .Into(this.WeatherImage);
             }
         }
-
 
         void ViewModel_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
         {
@@ -168,12 +166,8 @@ namespace WeatherReport
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
 
-        /// <summary>
-        /// Requesting location permission
-        /// </summary>
         public void requestLocationPermission()
         {
-
             Task.Run(async () => {
                 try
                 {
@@ -213,10 +207,12 @@ namespace WeatherReport
                 }
             });
         }
-        //TODO Navigation using viewmodel
+
         void NavigateToSunriseScreen(object sender, EventArgs e)
         {
             Intent navigate = new Intent(this, typeof(SunRiseActivity));
+            navigate.PutExtra("Sunrise", ViewModel.Sunrise);
+            navigate.PutExtra("Sunset", ViewModel.Sunset);
             StartActivity(navigate);
         }
     }

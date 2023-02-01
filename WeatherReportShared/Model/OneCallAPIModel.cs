@@ -10,9 +10,7 @@ namespace WeatherReportShared.Model
         public string description { get; set; }
         public string icon { get; set; }
         public string icon_url => string.Format("{0}{1}{2}", "https://openweathermap.org/img/wn/", icon, "@4x.png");
-
     }
-
     public class Current
     {
         public int dt { get; set; }
@@ -30,7 +28,6 @@ namespace WeatherReportShared.Model
         public int wind_deg { get; set; }
         public List<Weather> weather { get; set; }
     }
-
     public class Weather2
     {
         public int id { get; set; }
@@ -40,7 +37,6 @@ namespace WeatherReportShared.Model
         public string icon_url => string.Format("{0}{1}{2}", "https://openweathermap.org/img/wn/", icon, "@4x.png");
 
     }
-
     public class Hourly
     {
         public int dt { get; set; }
@@ -48,7 +44,7 @@ namespace WeatherReportShared.Model
         public double feels_like { get; set; }
         public int pressure { get; set; }
         public int humidity { get; set; }
-        public double dew_point { get; set; }  
+        public double dew_point { get; set; }
         public double uvi { get; set; }
         public int clouds { get; set; }
         public int visibility { get; set; }
@@ -57,7 +53,6 @@ namespace WeatherReportShared.Model
         public List<Weather2> weather { get; set; }
         public double pop { get; set; }
     }
-
     public class Temp
     {
         public double day { get; set; }
@@ -67,7 +62,6 @@ namespace WeatherReportShared.Model
         public double eve { get; set; }
         public double morn { get; set; }
     }
-
     public class FeelsLike
     {
         public double day { get; set; }
@@ -75,7 +69,6 @@ namespace WeatherReportShared.Model
         public double eve { get; set; }
         public double morn { get; set; }
     }
-
     public class Weather3
     {
         public int id { get; set; }
@@ -84,7 +77,6 @@ namespace WeatherReportShared.Model
         public string icon { get; set; }
         public string icon_url => string.Format("{0}{1}{2}", "https://openweathermap.org/img/wn/", icon, "@4x.png");
     }
-
     public class Daily
     {
         public int dt { get; set; }
@@ -104,8 +96,6 @@ namespace WeatherReportShared.Model
         public double uvi { get; set; }
         public double? rain { get; set; }
     }
-
-    //TODO chnGW
     public class OneCallAPIResponseModel
     {
         public double lat { get; set; }

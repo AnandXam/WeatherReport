@@ -21,7 +21,6 @@ namespace WeatherReportShared.Helpers
             {
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue(mediaType));
             }
-
             return client;
         }
     }

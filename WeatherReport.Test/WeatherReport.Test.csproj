@@ -25,18 +25,18 @@
     <None Remove="Services\" />
     <None Remove="Helpers\" />
     <None Remove="NSubstitute" />
-    <None Remove="Interfaces\" />
     <None Remove="Moq" />
     <None Remove="Newtonsoft.Json" />
     <None Remove="TestData\" />
     <None Remove="AutoMapper" />
+    <None Remove="Interfaces\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="VIewModels\" />
     <Folder Include="Services\" />
     <Folder Include="Helpers\" />
-    <Folder Include="Interfaces\" />
     <Folder Include="TestData\" />
+    <Folder Include="Interfaces\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\WeatherReportShared\WeatherReport.Core.csproj" />
